@@ -1,0 +1,2 @@
+# pelec201-group1-juanastea
+This repository contains our PELEC201 finals project, a fully coded website designed in Figma and implemented using HTML and CSS. The website is based on Juana’s Tea, a local business in Lucena City known for its home-brewed teas, handcrafted beverages, and a variety of food offerings. The project showcases the conversion of a Figma UI design into a functional, responsive web page.
