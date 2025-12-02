@@ -21,9 +21,11 @@
 
 This repository contains our **PELEC201 finals project**, a fully developed website inspired by **Juana’s Tea**, a local business in **Lucena City** known for:
 
-- Home-brewed teas 🍃  
-- Handcrafted beverages 🍹  
-- Delicious food offerings 🥯  
+- Milk tea 🍵  
+- Graham bar 🍫  
+- Fries 🍟  
+- Fruit juice 🍹  
+- Burger 🍔 
 
 The project demonstrates our ability to convert a **Figma user interface design** into an actual coded, responsive website using HTML & CSS — no frameworks required!
 
