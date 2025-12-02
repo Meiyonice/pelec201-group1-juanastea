@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hero Section</title>
+<link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #faebc7;
+        overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+        width: 100%;
+        padding: 20px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #faebc7;
+        box-sizing: border-box;
+    }
+
+    nav .logo {
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: #5b320e;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #5b320e;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .contact-btn {
+        padding: 10px 22px;
+        background: linear-gradient(to right, #c0640a, #914a09);
+        color: white;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 40px 60px;
+        position: relative;
+    }
+
+    .hero-text {
+        max-width: 450px;
+    }
+
+    .hero-title {
+        font-family: 'Tsukimi Rounded', sans-serif;
+        font-size: 70px;
+        font-weight: 800;
+        color: #4a2603;
+        line-height: 1.1;
+        opacity: 0;
+        animation: fadeInLeft 0.7s forwards;
+    }
+
+    .hero-desc {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #4a2603;
+        opacity: 0;
+        animation: fadeInLeft 0.7s forwards;
+        animation-delay: 0.3s;
+    }
+
+    .cta-btn {
+        margin-top: 30px;
+        padding: 14px 28px;
+        background: linear-gradient(to right, #c0640a, #914a09);
+        color: white;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-block;
+        opacity: 0;
+        animation: fadeInLeft 0.7s forwards;
+        animation-delay: 0.5s;
+    }
+
+    /* PRODUCT IMAGES */
+    .products {
+        display: flex;
+        gap: 20px;
+    }
+
+    .products img {
+        width: 220px;
+        transform: translateY(40px);
+        opacity: 0;
+        animation: popIn 0.6s forwards;
+    }
+
+    .products img:nth-child(1) { animation-delay: 0.2s; }
+    .products img:nth-child(2) { animation-delay: 0.4s; }
+    .products img:nth-child(3) { animation-delay: 0.6s; }
+
+    /* ANIMATION */
+    @keyframes fadeInLeft {
+        from { opacity: 0; transform: translateX(-40px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes popIn {
+        from { opacity: 0; transform: translateY(40px) scale(0.9); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* ARROWS */
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 40px;
+        color: #5b320e;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .arrow.left { left: 20px; }
+    .arrow.right { right: 20px; }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">J</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Products</a></li>
+    </ul>
+    <a href="#" class="contact-btn">Contact Us</a>
+</nav>
+
+<section class="hero">
+    <div class="arrow left">&#10094;</div>
+
+    <div class="hero-text">
+        <h1 class="hero-title">FRUIT TEA<br>SERIES</h1>
+        <p class="hero-desc">Freshly brewed tea meets juicy fruit and chewy jelly for a sweet, refreshing fusion in every sip.</p>
+        <a href="#" class="cta-btn">Treat Yourself Today!</a>
+    </div>
+
+    <div class="products">
+        <img src="product1.png" alt="Drink 1" />
+        <img src="product2.png" alt="Drink 2" />
+        <img src="product3.png" alt="Drink 3" />
+    </div>
+
+    <div class="arrow right">&#10095;</div>
+</section>
+
+</body>
+</html>
