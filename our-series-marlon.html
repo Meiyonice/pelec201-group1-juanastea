@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Series</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #FBF1CB;
+            width: 1440px;
+            height: 1467px;
+            position: relative;
+            font-family: 'Tsukimi Rounded', sans-serif;
+        }
+
+        /* --- Background floating icons --- */
+        .icon {
+            position: absolute;
+            opacity: 0.1;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .icon1 { width:150px; height:150px; left:2px; top:75px; background-image:url("bubble-tea (6).png"); transform:rotate(32.63deg); }
+        .icon2 { width:130px; height:130px; left:185px; top:168px; background-image:url("fruit (1).png"); transform:rotate(-34.63deg); }
+        .icon3 { width:135px; height:135px; left:551px; top:184px; background-image:url("beef (1).png"); transform:rotate(12.99deg); }
+
+        .title {
+            position: absolute;
+            width: 578px;
+            height: 200px;
+            left: 402px;
+            top: 60px;
+            font-weight: 700;
+            font-size: 85px;
+            color: #271209;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- Card Style --- */
+        .card {
+            position: absolute;
+            width: 413px;
+            height: 334px;
+            background: #FFFFFF;
+            border: 2px solid #271209;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform .45s ease;
+            
+            /* Prevent unwanted image shadows */
+            box-shadow: none !important;
+        }
+
+        /* Background inside card (for zoom-out) */
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #FFFFFF;
+            z-index: 0;
+            transition: transform .45s ease;
+            transform-origin: center;
+        }
+
+        /* Product image zoom */
+        .card img.main {
+            position: absolute;
+            object-fit: contain;
+            transition: transform .45s ease;
+            z-index: 2;
+        }
+
+        /* Shadow ellipse zooms with product */
+        .card .shadow {
+            position: absolute;
+            background: rgba(0,0,0,0.25);
+            filter: blur(2px);
+            border-radius: 50%;
+            transition: transform .45s ease;
+            z-index: 1;
+        }
+
+        .label {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            bottom: 15px;
+            font-weight: 700;
+            font-size: 24px;
+            color: #FBF8D8;
+            z-index: 3;
+        }
+
+        /* --- Hover Animations --- */
+        .card:hover img.main,
+        .card:hover .shadow {
+            transform: scale(1.12);     /* Product + its shadow zoom in */
+        }
+
+        .card:hover::before {
+            transform: scale(0.9);      /* Inside background zooms out */
+        }
+
+        /* --- Card Positions (unchanged) --- */
+
+        #milk-tea-card { left:51px; top:264px; }
+        #milk-tea-card .shadow { width:110px; height:18px; left:152px; top:250px; }
+        #milk-tea-card .main { width:151px; height:244px; left:131px; top:36px; }
+
+        #fruit-tea-card { left:485px; top:264px; }
+        #fruit-tea-card .shadow { width:110px; height:18px; left:152px; top:250px; }
+        #fruit-tea-card .main { width:256px; height:256px; left:79px; top:29px; }
+
+        #fries-card { left:918px; top:264px; }
+        #fries-card .shadow { width:173px; height:51px; left:118px; top:221px; }
+        #fries-card .main { width:259px; height:236px; left:69px; top:48px; }
+
+        #burger-card { left:268px; top:645px; }
+        #burger-card .shadow { width:215px; height:56px; left:101px; top:217px; }
+        #burger-card .main { width:317px; height:211px; left:46px; top:71px; }
+
+        #graham-card { left:701px; top:645px; }
+        #graham-card .shadow { width:176px; height:52px; left:119px; top:217px; }
+        #graham-card .main { width:227px; height:311px; left:93px; top:-14px; }
+    </style>
+
+</head>
+<body>
+
+    <!-- decorative background icons -->
+    <div class="icon icon1"></div>
+    <div class="icon icon2"></div>
+    <div class="icon icon3"></div>
+
+    <!-- title -->
+    <div class="title">OUR SERIES</div>
+
+    <!-- Milk Tea Card -->
+    <div class="card" id="milk-tea-card" aria-label="Milk tea product card">
+        <div class="shadow"></div>
+        <img class="main" src="5.png" alt="Milk Tea">
+        <div class="label">MILK TEA</div>
+    </div>
+
+    <!-- Fruit Tea Card -->
+    <div class="card" id="fruit-tea-card" aria-label="Fruit tea product card">
+        <div class="shadow"></div>
+        <img class="main" src="Gemini_Generated_Image_bln39hbln39hbln3-removebg-preview.png" alt="Fruit Tea">
+        <div class="label">FRUIT TEA</div>
+    </div>
+
+    <!-- Fries Card -->
+    <div class="card" id="fries-card" aria-label="Fries product card">
+        <div class="shadow"></div>
+        <img class="main" src="image.png" alt="Fries">
+        <div class="label">FRIES</div>
+    </div>
+
+    <!-- Burger Card -->
+    <div class="card" id="burger-card" aria-label="Burger product card">
+        <div class="shadow"></div>
+        <img class="main" src="image.png" alt="Burger">
+        <div class="label">BURGER</div>
+    </div>
+
+    <!-- Graham Bar Card -->
+    <div class="card" id="graham-card" aria-label="Graham bar product card">
+        <div class="shadow"></div>
+        <img class="main" src="image.png" alt="Graham Bar">
+        <div class="label">GRAHAM BAR</div>
+    </div>
+
+</body>
+</html>
