@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="style.css" />
-<title>Navbar</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Navbar</title>
 </head>
 <body>
-<nav class="navbar">
-<img src="logo.png" class="logo" alt="Logo" />
+    <nav class="navbar">
+        <div class="left-section">
+            <img src="NAV LOGO.png" class="logo" alt="Logo" />
+        </div>
+    <ul class="nav-links">
+        <li><a href="#" class="nav-btn active">HOME</a></li>
+        <li><a href="#" class="nav-btn">ABOUT US</a></li>
+        <li><a href="#" class="nav-btn">PRODUCTS</a></li>
+    </ul>
 
+        <div class="icons">
+            <button class="icon fb">
+                <!-- Facebook SVG -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 3H12C9.79 3 8 4.79 8 7V10H5V14H8V21H12V14H15L16 10H12V7C12 6.45 12.45 6 13 6H16V3H15Z" fill="currentColor"/>
+                </svg>
+            </button>
 
-<img src="SOAFER FINAL.png" class="brand" alt="Brand" />
+            <button class="icon messenger">
+                <!-- Messenger SVG -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.05 2 11C2 14.09 3.64 16.83 6.23 18.52V22L9.74 20.07C10.47 20.23 11.23 20.32 12 20.32C17.52 20.32 22 16.27 22 11.32C22 6.38 17.52 2 12 2ZM12.97 14.29L10.26 11.41L4.88 14.29L10.92 8L13.74 10.88L19.02 8L12.97 14.29Z" fill="currentColor"/>
+                </svg>
+            </button>
 
+            <button class="icon email">
+                <!-- Email SVG -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+                </svg>
+            </button>
+        </div>
 
-<ul class="nav-links">
-<li><a href="#">Home</a></li>
-<li><a href="#">About Us</a></li>
-<li><a href="#">Products</a></li>
-</ul>
+        <button class="contact-btn">Contact Us</button>
+    </nav>
+<script>
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const currentPage = window.location.pathname.split("/").pop(); 
+    // Example result: "about.html"
 
+    navButtons.forEach(btn => {
+        const linkPage = btn.getAttribute("href");
 
-<div class="icons">
-<div class="icon fb"></div>
-<div class="icon messenger"></div>
-<div class="icon email"></div>
-</div>
+        // If the href matches the current page, activate it
+        if (linkPage === currentPage) {
+            btn.classList.add("active");
+        }
 
-
-<button class="contact-btn">Contact Us</button>
-</nav>
+        // Also allow click switching (for single-page scenarios)
+        btn.addEventListener('click', function () {
+            navButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+</script>   
 </body>
 </html>
