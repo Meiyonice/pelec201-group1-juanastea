@@ -1,4 +1,3 @@
-<!-- HEADER -->
 <p align="center">
   <img src="https://cdn-icons-png.flaticon.com/512/6973/6973253.png" width="100" alt="Tea Icon"/>
 </p>
@@ -11,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Ongoing-yellow?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Technologies-HTML%20%7C%20CSS-blue?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Figma-Design-orange?style=for-the-badge&logo=figma"/>
 </p>
@@ -48,20 +47,3 @@ The project demonstrates our ability to convert a **Figma user interface design*
   &nbsp;
   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" width="45" height="45" alt="Figma Logo"/>
 </p>
-
----
-
-## 🗂️ Project Structure
-
-```bash
-.
-├── /assets
-│   ├── css
-│   │   └── styles.css
-│   ├── images
-│   │   └── ...
-├── index.html
-├── about.html
-├── products.html
-├── contact.html
-└── README.md
