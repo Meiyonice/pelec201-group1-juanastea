@@ -1,133 +1,390 @@
-/* GLOBAL */
+:root {
+  --bg-color: #fbf1cb;
+  --header-color: #242709;
+  --card-bg: #fff7f0;
+  --text-dark: #271209;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: "Poppins", system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
-/* NAV BAR */
-.navbar {
-    position: relative;
-    width: 1440px;
-    height: 125px;
+/* Main canvas wrapper (matches 1440×1024 layout) */
+.canvas {
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+
+  /* background pattern */
+  background-color: #FBF1CB;
+  background-repeat: repeat;
+  background-size: 135px 135px;
 }
 
-/* LOGO */
-.logo {
-    position: absolute;
-    width: 111px;
-    height: 111px;
-    left: 89px;
-    top: 9px;
+
+/* HEADER TEXT – MILK TEA SERIES */
+.page-title {
+  position: absolute;
+  top: 120px;
+  left: 690px;
+  width: 678px;
+  height: 200px;
+  font-family: "Tsukimi Rounded", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1;
+  color: #242709;
+  z-index: 2;
 }
 
-/* BRAND IMAGE */
-.brand {
-    position: absolute;
-    height: 97.58px;
-    left: 4.46%;
-    top: calc(50% - 97.58px/2);
+
+
+.product-description {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-dark);
+  max-width: 90%;
 }
 
-/* NAV LINKS */
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 300px;
-    display: flex;
-    gap: 40px;
+
+/* MAIN LAYOUT: image + cards */
+.main {
+  position: absolute;
+  top: 120px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  gap: 10px;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: #462211;
-    font-size: 20px;
-    font-weight: 500;
+/* LEFT: MAIN MILK TEA IMAGE */
+.main-image-wrapper {
+  width: 542px;
+  height: 784px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-/* CONTACT BUTTON */
-.contact-btn {
-    position: absolute;
-    left: 1179px;
-    top: 44px;
-    padding: 8px 41px;
-    background: linear-gradient(360deg, #462211 0%, #C55E05 100%);
-    border-radius: 50px;
-    color: #FFFFFF;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
+.main-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* ICON SECTION */
-.icons {
-    position: absolute;
-    left: 850px;
-    top: 40px;
-    display: flex;
-    gap: 40px;
+
+/* RIGHT: PRODUCT CARDS COLUMN */
+.product-panel {
+  flex: 1;
+  padding-top: 100px;   /* 120 - 20 */
 }
 
-.icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 15px;
-    position: relative;
-    cursor: pointer;
+/* Product list: first 3 cards visible, rest scrollable */
+.product-list {
+  max-height: 550px;      /* visible height for cards */
+  overflow-y: auto;
+  overflow-x: visible;
+
+  padding-right: 10px;
+  padding-left: 60px;
+  padding-top: 10px;
 }
 
-/* DEFAULT STATE (no fill background) */
-.icon::before {
-    content: "";
-    position: absolute;
-    width: 38px;
-    height: 38px;
-    border: 3px solid #462211;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+
+/* Scrollbar styling */
+.product-list::-webkit-scrollbar {
+  width: 8px;
 }
 
-.icon::after {
-    content: "";
-    position: absolute;
-    background: #462211;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.product-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
 }
 
-/* VECTOR SIZES */
-.fb::after {
-    width: 6px;
-    height: 21px;
+.product-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }
 
-.messenger::after {
-    width: 20px;
-    height: 19px;
+/* PRODUCT CARD */
+.product-card {
+  width: 687px;
+  height: 160px;
+  background-color: var(--card-bg);
+  border-radius: 50px;
+  margin-bottom: 24px;
+  padding: 18px 28px;
+  display: flex;
+  gap: 24px;
+
+  /* Figma Drop Shadow */
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
 }
 
-.email::after {
-    width: 30px;
-    height: 15px;
+
+/* PRODUCT IMAGE – no cutting on edges */
+.product-image {
+  width: 180px;     /* wider frame */
+  height: 220px;    /* taller frame */
+  /* border-radius: 18px; */
+  overflow: hidden;
+  align-self: center;
+  padding: 0px;     /* small breathing room */
 }
 
-/* HOVER EFFECT */
-.icon:hover {
-    background: #462211;
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 
-.icon:hover::before {
-    border-color: #FBF8D8;
+
+
+/* PRODUCT TEXT */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.icon:hover::after {
-    background: #FBF8D8;
+.product-title {
+  font-family: "Tsukimi Rounded", system-ui, sans-serif;
+  font-weight: 700;       
+  font-size: 32px;
+  color: #271209;
+  margin-bottom: 4px;
+}
+
+.product-description {
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #271209;
+  max-width: 500px;
+}
+
+/* RATING SECTION */
+.rating-row {
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-right: 6px;
+}
+
+.star {
+  font-size: 16px;
+  color: #f9a825;
+}
+
+.rating-value {
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+/* =======================
+   PRICE CIRCLES SECTION
+   ======================= */
+
+/* Shared style for each option (circle + label) */
+.price-option {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.price-medium {
+  left: 812px;  
+  top: 824px;    
+}
+
+.price-large {
+  left: 1083px;  
+  top: 824px;   
+}
+
+/* Circle (ellipse) – gradient top #462211, bottom #C55E05 */
+.price-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #462211, #c55e05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+.price-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.price-value {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600 ;
+  color: #FBF1CB;
+  line-height: 1;
+  text-align: center
+}
+
+
+.price-php {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FBF1CB;
+  margin-top: 4px;
+  line-height: 1;
+  text-align: center 
+}
+
+
+.price-label {
+  margin-top: 12px;
+  font-family: "Poppins", system-ui, sans-serif;
+  font-weight: 600;       
+  font-size: 20px;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+
+
+.bg-icons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;   
+  z-index: 0;
+}
+
+
+.bg-icon {
+  position: absolute;
+  width: 120px;         
+  opacity: 0.35;
+}
+
+.page-title,
+.main,
+.price-option {
+  z-index: 1;   
+}
+
+.icon-bt-1 { top: 40px; left: 80px; transform: rotate(-25deg); }
+
+/* ========== BUBBLE TEA (OUTLINE) ========== */
+.icon-bt-1 {
+  top: 40px;
+  left: 25px;
+  transform: rotate(-24deg);
+}
+
+.icon-bt-2 {
+  top: 430px;
+  left: 630px;
+  transform: rotate(-22deg);
+}
+
+.icon-bt-3 {
+  top: 370px;
+  left: 1070px;
+  transform: rotate(-25deg);
+}
+
+/* ========== BURGER (OUTLINE) ========== */
+.icon-burger-1 {
+  top: 5px;
+  left: 610px;
+  transform: rotate(5deg);
+}
+
+.icon-burger-2 {
+  top: 225px;
+  left: 650px;
+  transform: rotate(3deg);
+}
+
+.icon-burger-3 {
+  top: 875px;
+  left: 320px;
+  transform: rotate(4deg);
+}
+
+/* ========== FRIES (OUTLINE) ========== */
+.icon-fries-1 {
+  top: 55px;
+  left: 330px;
+  transform: rotate(-15deg);
+}
+
+.icon-fries-2 {
+  top: 780px;
+  left: 20px;
+  transform: rotate(-18deg);
+}
+
+.icon-fries-3 {
+  top: 510px;
+  left: 870px;
+  transform: rotate(-16deg);
+}
+
+/* ========== FRUIT TEA (OUTLINE) ========== */
+.icon-fruit-1 {
+  top: 70px;
+  left: 930px;
+  transform: rotate(18deg);
+}
+
+.icon-fruit-2 {
+  top: 315px;
+  left: 1280px;
+  transform: rotate(20deg);
+}
+
+/* ========== GRAHAM CRACKER (OUTLINE) ========== */
+.icon-graham-1 {
+  top: 50px;
+  left: 1230px;
+  transform: rotate(-18deg);
+}
+
+.icon-graham-2 {
+  top: 745px;
+  left: 640px;
+  transform: rotate(-22deg);
+}
+
+.icon-graham-3 {
+  top: 695px;
+  left: 1120px;
+  transform: rotate(-20deg);
 }
