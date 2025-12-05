@@ -1,119 +1,121 @@
-/* GLOBAL */
+/* ============================
+   GLOBAL
+============================ */
 body {
-margin: 0;
-padding: 0;
-background: transparent;
-font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 125px; /* match navbar height */
 }
 
-/*HIDE NAV*/
+/* ============================
+   NAVBAR (Fixed + Auto-Hide)
+============================ */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;
-    transition: transform 0.35s ease; /* smooth slide */
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    box-sizing: border-box;
+    z-index: 9999;
+
+    background: linear-gradient(180deg, #F1A901 0%, #FBF1CB 100%);
+    transition: transform 0.35s ease, opacity 0.3s ease;
 }
+
+/* Hide on scroll down */
 .navbar.hide {
     transform: translateY(-100%);
+    opacity: 0;
 }
 
-
-
-/* NAVBAR FLEXBOX */
-.navbar {
-width: 100%;
-height: 125px;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 0 60px;
-box-sizing: border-box;
-position: relative;
-background: linear-gradient(180deg, #F1A901 0%, #FBF1CB 100%);
-}
-
-
-/* LEFT SECTION: LOGO + BRAND */
+/* ============================
+   LEFT SECTION
+============================ */
 .left-section {
-display: flex;
-align-items: center;
-gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
-
 
 .logo {
-width: 110px;
-height: 120px;
+    width: 110px;
+    height: 120px;
 }
 
-/* NAV LINKS */
+/* ============================
+   NAV LINKS
+============================ */
 .nav-links {
-list-style: none;
-display: flex;
-gap: 40px;
-margin: 0;
-padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
-
 
 .nav-links a {
-text-decoration: none;
-color: #462211;
-font-size: 20px;
-font-weight: 500;
+    text-decoration: none;
+    color: #462211;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-
-/* ICON BUTTON SECTION */
+/* ============================
+   ICON BUTTONS
+============================ */
 .icons {
-display: flex;
-gap: 30px;
+    display: flex;
+    gap: 30px;
 }
-
 
 .icon {
-width: 50px;
-height: 50px;
-background: none;
-border-radius: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
-border: 3px solid #462211;
-cursor: pointer;
-transition: 0.25s;
-color: #462211;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border-radius: 50px;
+    border: 3px solid #462211;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s;
+    color: #462211;
 }
-
 
 .icon svg {
-width: 80%;
-height: 80%;
+    width: 80%;
+    height: 80%;
 }
 
-
-/* HOVER STATE */
 .icon:hover {
-background: #462211;
-border-color: #FBF8D8;
-color: #FBF8D8;
+    background: #462211;
+    border-color: #FBF8D8;
+    color: #FBF8D8;
 }
 
-
-/* CONTACT BUTTON */
+/* ============================
+   CONTACT BUTTON
+============================ */
 .contact-btn {
-padding: 10px 45px;
-background: linear-gradient(360deg, #462211 0%, #C55E05 100%);
-border-radius: 50px;
-border: none;
-color: white;
-font-weight: 600;
-cursor: pointer;
+    padding: 10px 45px;
+    background: linear-gradient(360deg, #462211 0%, #C55E05 100%);
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-/* Navigation Button Style */
+/* ============================
+   NAV BUTTON (Active Page)
+============================ */
 .nav-btn {
     padding: 10px 20px;
     background: transparent;
@@ -122,38 +124,18 @@ cursor: pointer;
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
+
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* Smooth transition */
     transition: 0.25s;
 }
 
-/* Hover (optional) */
 .nav-btn:hover {
     background: rgba(70, 34, 17, 0.15);
 }
 
-/* Active (Clicked Button) */
 .nav-btn.active {
     background: #462211;
     color: #FBF8D8;
-}
-
-/* === NAVBAR SCROLL BEHAVIOR === */
-.navbar {
-    position: absolute;      /* It will follow the page (NOT fixed) */
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: top 0.4s ease, opacity 0.3s ease;
-    opacity: 1;
-    z-index: 9999;
-}
-
-/* Hidden state when scrolling down */
-.navbar.hide {
-    top: -140px;     /* Slides up out of view */
-    opacity: 0;      /* Optional fade effect */
 }

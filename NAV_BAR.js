@@ -15,19 +15,19 @@ navButtons.forEach(btn => {
 });
 
 let lastScrollY = window.scrollY;
-const navbar = document.querySelector(".navbar");
+const navbar = document.getElementById("navbar");
+
 
 window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
-
-    // Scroll down → hide navbar
-    if (currentScroll > lastScrollY + 1) {   // 2 scroll "clicks"
-        navbar.classList.add("hide");
-    }
-    // Scroll up → show navbar
-    else if (currentScroll < lastScrollY - 1) {  // 1 scroll "click"
-        navbar.classList.remove("hide");
-    }
-
-    lastScrollY = currentScroll;
+if (window.scrollY > lastScrollY) {
+// scrolling down
+navbar.classList.add("hide");
+} else {
+// scrolling up
+navbar.classList.remove("hide");
+}
+lastScrollY = window.scrollY;
 });
+
+
+
