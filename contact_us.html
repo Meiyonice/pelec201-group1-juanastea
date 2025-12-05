@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Juana's Tea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Tsukimi+Rounded:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FBF1CB; /* Solid background */
+      color: #271209;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+      position: relative;
+      overflow-y: auto; /* Full page scrollable */
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('bg pattern.png') repeat;
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    /* ===== Heading Outside Boxes ===== */
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .contact-header h1 {
+      font-family: 'Tsukimi Rounded', cursive;
+      font-weight: 700;
+      font-size: 5.3125rem;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      padding: 0 20px
+    }
+
+    /* Lines overlapping heading */
+    .contact-header::before,
+    .contact-header::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #271209;
+      z-index: 0;
+    }
+
+    .contact-header::before { top: 0px; }
+    .contact-header::after { top: 115px; }
+
+    /* Circles centered on lines */
+    .circle-top,
+    .circle-bottom {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-color: #271209;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .circle-top { top: -4px; }
+    .circle-bottom { top: 111px; }
+
+    /* Subheading */
+    .contact-header p {
+      font-weight: 600;
+      font-size: 3.125rem; /* 50px in rem */
+      width: 1229px;
+      height: 150px;
+      margin: 40px auto 0 auto;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    /* ===== Container for Two Boxes ===== */
+    .boxes-container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      z-index: 1;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    /* ===== Form Box ===== */
+    .form-box {
+      width: 631px;
+      height: 518px;
+      display: flex;
+      flex-direction: column;
+      gap: 31px; /* spacing */
+      background-color: rgba(241, 169, 1, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 10px 0 rgba(0,0,0,0.25);
+      align-items: center; 
+      justify-content: center;
+    }
+
+    input, textarea {
+      border-radius: 12px;
+      border: none;
+      font-size: 1rem;
+      box-shadow: 0 6px 10px 0 rgba(0,0,0,0.25);
+    }
+
+    input[name="name"], input[name="email"] {
+      width: 480px;
+      height: 53px;
+      padding: 0 12px;
+    }
+
+    textarea[name="message"] {
+      width: 480px;
+      height: 138px;
+      padding: 12px;
+      resize: none;
+    }
+
+    .submit-btn {
+      width: 168px;
+      height: 41px;
+      background: linear-gradient(to right, #462211, #C55E05);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s;
+      box-shadow: 0 6px 10px 0 rgba(0,0,0,0.25);
+      margin-top: 31px; 
+    }
+
+    .submit-btn:hover { transform: scale(1.05); }
+
+    /* ===== Info Box ===== */
+    .info-box {
+     width: 324px;
+     height: 518px;
+     background-color: rgba(241, 169, 1, 0.8);
+     border-radius: 20px;
+     padding: 30px;
+     display: flex;
+     flex-direction: column;
+     gap: 40px; 
+     justify-content: center; 
+     align-items: center; 
+     box-shadow: 0 6px 10px 0 rgba(0,0,0,0.25);
+    }
+
+    .info-item {
+     display: flex;
+     flex-direction: column; 
+     align-items: center; 
+     text-align: center;
+     gap: 10px;
+    }
+
+    .info-item img {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     background-color: #F1A901;
+     padding: 10px;
+     box-shadow: 0 6px 10px 0 rgba(0,0,0,0.25);
+    }
+
+    .info-label {
+     font-weight: 600;
+     font-size: 1rem;
+    }
+
+    .info-text {
+     font-size: 0.9rem;
+    }
+
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .info-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #F1A901;
+      padding: 8px;
+      box-shadow: 0 6px 10px 0 rgba(0,0,0,0.25);
+    }
+
+    .info-text {
+     font-weight: 600; /* semibold */
+    }
+
+    @media (max-width: 768px) {
+      .boxes-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-header p {
+        width: 100%;
+        height: auto;
+        font-size: 2rem;
+      }
+      .form-box, .info-box {
+        width: 90%;
+        height: auto;
+      }
+      input[name="name"], input[name="email"], textarea[name="message"] {
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="contact-header">
+    <h1>CONTACT US</h1>
+    <div class="circle-top"></div>
+    <div class="circle-bottom"></div>
+    <p>Got a craving or a question? Slide into our inbox — Juana’s here for you!</p>
+  </div>
+
+  <div class="boxes-container">
+    <div class="form-box">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+
+    <div class="info-box">
+
+  <div class="info-item">
+    <img src="phone.png" alt="Phone">
+    <div class="info-label">Phone</div>
+    <div class="info-text">+63 912 345 6789</div>
+  </div>
+
+  <div class="info-item">
+    <img src="email.png" alt="Email">
+    <div class="info-label">Email</div>
+    <div class="info-text">contact@juanastea.com</div>
+  </div>
+
+  <div class="info-item">
+    <img src="facebook.png" alt="Facebook">
+    <div class="info-label">Facebook</div>
+    <div class="info-text">Juana's Tea</div>
+     </div>
+    </div>
+   </div>
+  </div>
+</body>
+</html>
