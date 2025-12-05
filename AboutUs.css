@@ -1,10 +1,10 @@
 /* About Us Section -----------------------------------------*/
 .about-container {
     position: relative;
-    width: auto;
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    min-height: auto;
+    min-height: 900px;
     background: #FBF1CB;
 
     display: flex;
@@ -144,5 +144,5 @@
 }
 
 .learn-more-btn:hover {
-    opacity: 0.85;
+    opacity: 0.45;
 }
