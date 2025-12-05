@@ -139,8 +139,8 @@ body {
 
 /* PRODUCT IMAGE */
 .product-image {
-  width: 140px;     
-  height: 180px;    
+  width: 180px;     
+  height: 220px;    
   /* border-radius: 18px; */
   overflow: hidden;
   align-self: center;
