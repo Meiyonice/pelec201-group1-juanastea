@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- POPPINS FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* About Us container */
+        .about-container {
+            position: relative;
+            width: 1440px;
+            height: 1043px;
+            background: #FBF1CB;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        /* UNIVERSAL: Make ALL ellipses circles */
+        .ellipse-195, .ellipse-198, .ellipse-196, .ellipse-199,
+        .ellipse-197, .ellipse-200, .ellipse-191 {
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        /* Ellipse 195 */
+        .ellipse-195 {
+            width: 561px;
+            height: 561px;
+            left: -448px;
+            top: 57px;
+            background: #F3C800;
+        }
+
+        /* Ellipse 198 */
+        .ellipse-198 {
+            width: 561px;
+            height: 561px;
+            left: 1344px;
+            top: 419px;
+            background: #F3C800;
+            transform: rotate(-177deg);
+        }
+
+        /* Ellipse 196 */
+        .ellipse-196 {
+            width: 464px;
+            height: 464px;
+            left: -26px;
+            top: -191px;
+            background: #C55E05;
+        }
+
+        /* Ellipse 199 */
+        .ellipse-199 {
+            width: 464px;
+            height: 464px;
+            left: 1007px;
+            top: 748px;
+            background: #C55E05;
+            transform: rotate(-177deg);
+        }
+
+        /* Ellipse 197 */
+        .ellipse-197 {
+            width: 369px;
+            height: 369px;
+            left: 351px;
+            top: -312px;
+            background: #462211;
+        }
+
+        /* Ellipse 200 */
+        .ellipse-200 {
+            width: 369px;
+            height: 369px;
+            left: 720px;
+            top: 950px;
+            background: #462211;
+            transform: rotate(-177deg);
+        }
+
+        /* Center circle (Group 57) */
+        .group-57 {
+            position: absolute;
+            width: 341px;
+            height: 341px;
+            left: 419px;
+            top: 152px;
+        }
+
+        .ellipse-191 {
+            width: 341px;
+            height: 341px;
+            background: #462211;
+        }
+
+        /* Main logo in center */
+        .soafer-final-4 {
+            position: absolute;
+            width: 294px;
+            height: 300px;
+            left: 573px;
+            top: 152px;
+            background: url("SOAFER FINAL.png") center/cover no-repeat;
+        }
+
+        /* Secondary logo */
+        .soafer-final-2 {
+            position: absolute;
+            width: 266px;
+            height: 205px;
+            left: 769px;
+            top: 220px;
+            background: url("SOAFER FINAL.png") center/cover no-repeat;
+            filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.25));
+        }
+
+        /* Paragraph text */
+        .about-text {
+            position: absolute;
+            width: 728px;
+            height: auto;
+            left: 356px;
+            top: 520px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 38px;
+            text-align: center;
+            color: #271209;
+        }
+
+        /* Learn More button wrapper */
+        .group-63 {
+            position: absolute;
+            width: 168px;
+            height: 41px;
+            left: 636px;
+            top: 784px;
+        }
+
+        /* Button */
+        .learn-more-btn {
+            width: 168px;
+            height: 41px;
+            background: linear-gradient(180deg, #462211 0%, #C55E05 100%);
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="about-container">
+        <image src="Juanas\NAV LOGO.png" alt="Background Image" style="position:absolute; width:500px; height: 100px; left:0; top:0; z-index:-1; ">
+        <!-- Background Circles -->
+        <div class="ellipse-195"></div>
+        <div class="ellipse-198"></div>
+        <div class="ellipse-196"></div>
+        <div class="ellipse-199"></div>
+        <div class="ellipse-197"></div>
+        <div class="ellipse-200"></div>
+
+        <!-- Main brown center circle -->
+        <div class="group-57">
+            <div class="ellipse-191"></div>
+        </div>
+
+        <!-- Logos -->
+        <div class="Juanas\NAV LOGO.png"></div>
+        <div class="soafer-final-2"></div>
+
+        <!-- About text -->
+        <div class="about-text">
+            Juana's Tea began in 2023 as a small family business in Unzon Ibaba TMPI-1, Brgy. Gulang-Gulang. 
+            The family started by selling homemade products from their own home. With hard work, passion, and 
+            loyal customers, Juana's Tea grew and by 2025 opened its first stall at Gulang-Gulang National 
+            High School (GGNHS).
+        </div>
+
+        <!-- Button -->
+        <div class="group-63">
+            <button class="learn-more-btn">Learn More</button>
+        </div>
+
+    </div>
+
+</body>
+<link rel="stylesheet" href="AB.CSS">
+</html>

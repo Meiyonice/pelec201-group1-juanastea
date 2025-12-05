@@ -1,0 +1,148 @@
+/* About Us Section -----------------------------------------*/
+.about-container {
+    position: relative;
+    width: auto;
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: auto;
+    background: #FBF1CB;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+/* UNIVERSAL circle style for all ellipses */
+.ellipse {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* ----------- INDIVIDUAL ELLIPSES ---------------- */
+
+/* Yellow circles */
+.ellipse-yellow-large-left {
+    width: 38vw;
+    height: 38vw;
+    max-width: 561px;
+    max-height: 561px;
+    left: -20vw;
+    top: 6vw;
+    background: #F3C800;
+}
+
+.ellipse-yellow-large-right {
+    width: 38vw;
+    height: 38vw;
+    max-width: 561px;
+    max-height: 561px;
+    right: -20vw;
+    top: 25vw;
+    background: #F3C800;
+    transform: rotate(-177deg);
+}
+
+/* Orange circles */
+.ellipse-orange-left {
+    width: 30vw;
+    height: 30vw;
+    max-width: 464px;
+    max-height: 464px;
+    left: -5vw;
+    top: -10vw;
+    background: #C55E05;
+}
+
+.ellipse-orange-right {
+    width: 30vw;
+    height: 30vw;
+    max-width: 464px;
+    max-height: 464px;
+    right: -10vw;
+    top: 45vw;
+    background: #C55E05;
+    transform: rotate(-177deg);
+}
+
+/* Dark Brown circles */
+.ellipse-brown-left {
+    width: 26vw;
+    height: 26vw;
+    max-width: 369px;
+    max-height: 369px;
+    left: 15vw;
+    top: -15vw;
+    background: #462211;
+}
+
+.ellipse-brown-right {
+    width: 26vw;
+    height: 26vw;
+    max-width: 369px;
+    max-height: 369px;
+    right: 15vw;
+    top: 65vw;
+    background: #462211;
+    transform: rotate(-177deg);
+}
+
+/* Center circle behind logo */
+.ellipse-center {
+    width: 24vw;
+    height: 24vw;
+    max-width: 341px;
+    max-height: 341px;
+    background: #462211;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------ */
+
+/* Logo inside center circle */
+.soafer-final-4 {
+    width: 1200px;
+    height: 80%;
+    background: url("Juanas\NAV LOGO.png") center/contain no-repeat;
+    border-radius: 0%;
+    margin: 0 auto;
+}
+
+/* About text */
+.about-text {
+    width: 90%;
+    max-width: 728px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #271209;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+/* Learn More Button --------------------------*/
+.learn-more-btn {
+    margin-top: 40px;
+
+    padding: 12px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+
+    background: linear-gradient(180deg, #462211 0%, #C55E05 100%);
+    color: #FFF;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.learn-more-btn:hover {
+    opacity: 0.85;
+}
