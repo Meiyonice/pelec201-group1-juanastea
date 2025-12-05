@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juana's Tea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/script.js" defer></script>
+</head>
+
+<body>
+  <!------------------------------------
+      HERO SECTION
+    -------------------------------------->
+
+  <section id="hero">
+    <!-- Left arrow -->
+    <div class="arrow left">
+      <svg width="60" height="60" viewBox="0 0 24 24">
+        <path d="M15 6l-6 6 6 6" stroke="#5C3A2E" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+    <!-- Right arrow -->
+    <div class="arrow right">
+      <svg width="60" height="60" viewBox="0 0 24 24">
+        <path d="M9 6l6 6-6 6" stroke="#5C3A2E" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      </svg>
+    </div>
+    <!-- Hero section text -->
+    <div class="hero-text">
+      <h1 class="hero-title">MILK TEA<br>SERIES</h1>
+      <p class="hero-desc">
+        Richly brewed tea meets silky milk and chewy pearls for the perfect blend of comfort and flavor in every sip.
+      </p>
+      <a href="#" class="cta-btn">Treat Yourself Today!</a>
+    </div>
+    <!-- Hero section product series -->
+    <div class="product-layer" id="product-layer"></div>
+  </section>
+
+  <!------------------------------------
+      PRODUCTS SECTION (OUR SERIES)
+    -------------------------------------->
+
+  <section id="products">
+    <!-- Our Series Title -->
+    <h2 class="products-title">
+      <span>OUR SERIES</span>
+    </h2>
+    <!-- Product cards -->
+    <div class="products-container">
+      <!-- Milk Tea Series -->
+      <div class="product-card" style="--img-width:35%; --hover-scale:1.25;">
+        <div class="card-bg"></div>
+        <span class="shadow"></span>
+        <img src="/assets/images/products/milk-tea/green-milk-tea.png" class="product-img" alt="Milk Tea">
+        <p class="product-name">MILK TEA</p>
+      </div>
+      <!-- Fruit Tea Series -->
+      <div class="product-card" style="
+                --img-width:45%;
+                --img-scale:1.25;
+                --hover-scale:1.6;
+                --shadow-w:85px;
+                --shadow-h:18px;
+                --shadow-y:55px;
+              ">
+        <div class="card-bg"></div>
+        <span class="shadow"></span>
+        <img src="/assets/images/products/fruit-tea/fruit-tea-blue-red.png" class="product-img" alt="Fruit Tea">
+        <p class="product-name">FRUIT TEA</p>
+      </div>
+      <!-- Fries Series -->
+      <div class="product-card" style="
+                --img-width:55%;
+                --img-scale:1.25;
+                --hover-scale:1.5;
+                --shadow-w:150px;
+                --shadow-h:30px;
+                --shadow-y:65px;
+              ">
+        <div class="card-bg"></div>
+        <span class="shadow"></span>
+        <img src="/assets/images/products/fries/chili-bbq.png" class="product-img" alt="Fries">
+        <p class="product-name">FRIES</p>
+      </div>
+      <!-- Burger Series -->
+      <div class="product-card" style="
+                    --img-width:55%;
+                    --img-scale:1.3;
+                    --hover-scale:1.6;
+                    --shadow-w:150px;
+                    --shadow-h:30px;
+                    --shadow-y:55px;
+                  ">
+        <div class="card-bg"></div>
+        <span class="shadow"></span>
+        <img src="/assets/images/products/burger/bacon.png" class="product-img" alt="Burger">
+        <p class="product-name">BURGER</p>
+      </div>
+      <!-- Graham Bar Series -->
+      <div class="product-card" style="
+                    --img-width:35%;
+                    --img-scale:1.3;
+                    --hover-scale:1.6;
+                    --shadow-w:100px;
+                    --shadow-h:30px;
+                    --shadow-y:65px;
+                  ">
+        <div class="card-bg"></div>
+        <span class="shadow"></span>
+        <img src="/assets/images/products/graham-bar/chocomallows.png" class="product-img" alt="Graham Bar">
+        <p class="product-name">GRAHAM BAR</p>
+      </div>
+    </div>
+  </section>
+
+
+</body>
+
+</html>
