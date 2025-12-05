@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
 
-    <!-- POPPINS FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Juanas\about_us.html">
 
     <style>
         /* About Us container */
@@ -85,7 +85,7 @@
             transform: rotate(-177deg);
         }
 
-        /* Center circle (Group 57) */
+        /* Center circle (Group 57) - This acts as the background for the Logo */
         .group-57 {
             position: absolute;
             width: 341px;
@@ -94,30 +94,38 @@
             top: 152px;
         }
 
-        .ellipse-191 {
-            width: 341px;
+        /* --- NEW CSS FOR NAV LOGO --- */
+        .nav-logo-placed {
+            position: absolute;
+            /* Matches the coordinates of .group-57 to align with the brown circle */
+            left: 419px; 
+            top: 152px;
+            width: 341px; /* Matching size of the background circle */
             height: 341px;
-            background: #462211;
+            object-fit: contain; /* Ensures the logo fits nicely */
+            z-index: 10; /* Ensures it sits on top */
         }
 
-        /* Main logo in center */
+        /* Main logo in center (The Text) */
         .soafer-final-4 {
             position: absolute;
             width: 294px;
             height: 300px;
             left: 573px;
             top: 152px;
-            background: url("SOAFER FINAL.png") center/cover no-repeat;
+            background: url("SOAFER FINALe.png") center/cover no-repeat;
+            /* z-index adjusted so it doesn't overlap weirdly if images touch */
+            z-index: 5; 
         }
 
         /* Secondary logo */
         .soafer-final-2 {
             position: absolute;
-            width: 266px;
+            width: 280px;
             height: 205px;
-            left: 769px;
+            left: 720px;
             top: 220px;
-            background: url("SOAFER FINAL.png") center/cover no-repeat;
+            background: url("SOAFER FINALes.png") center/cover no-repeat;
             filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.25));
         }
 
@@ -167,8 +175,7 @@
 <body>
 
     <div class="about-container">
-        <image src="Juanas\NAV LOGO.png" alt="Background Image" style="position:absolute; width:500px; height: 100px; left:0; top:0; z-index:-1; ">
-        <!-- Background Circles -->
+        
         <div class="ellipse-195"></div>
         <div class="ellipse-198"></div>
         <div class="ellipse-196"></div>
@@ -176,16 +183,14 @@
         <div class="ellipse-197"></div>
         <div class="ellipse-200"></div>
 
-        <!-- Main brown center circle -->
         <div class="group-57">
             <div class="ellipse-191"></div>
         </div>
 
-        <!-- Logos -->
-        <div class="Juanas\NAV LOGO.png"></div>
+        <img src="NAV LOGO.png" alt="Juana's Tea Logo" class="nav-logo-placed">
+
         <div class="soafer-final-2"></div>
 
-        <!-- About text -->
         <div class="about-text">
             Juana's Tea began in 2023 as a small family business in Unzon Ibaba TMPI-1, Brgy. Gulang-Gulang. 
             The family started by selling homemade products from their own home. With hard work, passion, and 
@@ -193,7 +198,6 @@
             High School (GGNHS).
         </div>
 
-        <!-- Button -->
         <div class="group-63">
             <button class="learn-more-btn">Learn More</button>
         </div>
@@ -201,5 +205,4 @@
     </div>
 
 </body>
-<link rel="stylesheet" href="AB.CSS">
 </html>
