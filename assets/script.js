@@ -362,3 +362,61 @@ document.addEventListener("DOMContentLoaded", () => {
 =================================== */
 
 updateSlide(currentIndex);
+
+
+/* ===================================
+   NAVBAR SCROLL CONNECTION
+=================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // NAV BUTTONS
+  const navButtons = document.querySelectorAll(".nav-btn");
+  const contactBtn = document.querySelector(".contact-btn");
+
+  // SECTIONS
+  const sections = {
+    "HOME": document.getElementById("hero"),
+    "PRODUCTS": document.getElementById("products"),
+    "ABOUT US": document.getElementById("about-us"),
+    "CONTACT": document.querySelector("footer")
+  };
+
+  // Smooth scroll function
+  function scrollToSection(section) {
+    if (!section) return;
+
+    const navHeight = document.getElementById("navbar").offsetHeight;
+    const sectionTop = section.offsetTop - navHeight + 2;
+
+    window.scrollTo({
+      top: sectionTop,
+      behavior: "smooth"
+    });
+  }
+
+  // Remove active class
+  function clearActive() {
+    navButtons.forEach(btn => btn.classList.remove("active"));
+  }
+
+  // NAVBAR BUTTON CLICK
+  navButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      const text = button.textContent.trim().toUpperCase();
+
+      clearActive();
+      button.classList.add("active");
+
+      scrollToSection(sections[text]);
+    });
+  });
+
+  // CONTACT US BUTTON (right side)
+  contactBtn.addEventListener("click", () => {
+    clearActive();
+    scrollToSection(sections["CONTACT"]);
+  });
+});
