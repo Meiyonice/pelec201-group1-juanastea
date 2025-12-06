@@ -2,7 +2,9 @@
    GLOBAL
 ----------------------------------- */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -11,7 +13,122 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #FBF1CB;
     overflow-x: hidden;
+    padding-top: 125px;
 }
+
+
+/* ============================
+   NAVBAR (Fixed + Auto-Hide)
+============================ */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    box-sizing: border-box;
+    z-index: 9999;
+    background: linear-gradient(180deg, #F1A901 0%, #FBF1CB 100%);
+    transition: transform 0.35s ease, opacity 0.3s ease;
+}
+
+#navbar.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* Left side */
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 110px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: transparent;
+    color: #462211;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+
+.nav-btn:hover {
+    background: rgba(70, 34, 17, 0.15);
+}
+
+.nav-btn.active {
+    background: #462211;
+    color: #FBF8D8;
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    gap: 30px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: none;
+    border-radius: 50%;
+    border: 3px solid #462211;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s;
+    color: #462211;
+}
+
+.icon svg {
+    width: 80%;
+    height: 80%;
+}
+
+.icon:hover {
+    background: #462211;
+    border-color: #FBF8D8;
+    color: #FBF8D8;
+}
+
+/* Contact button */
+.contact-btn {
+    padding: 10px 45px;
+    background: linear-gradient(360deg, #462211 0%, #C55E05 100%);
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 
 /* -----------------------------------
    HERO SECTION
@@ -20,10 +137,10 @@ body {
 #hero {
     display: flex;
     justify-content: flex-start;
-    height: 100vh;
-    width: 100%;
     align-items: flex-start;
     gap: 40px;
+    height: 100vh;
+    width: 100%;
     padding: 80px 120px;
     position: relative;
     perspective: 1200px;
@@ -31,7 +148,7 @@ body {
     overflow: visible;
 }
 
-/* Hero section bg mask fade */
+/* Hero section BG + Mask */
 #hero::before {
     content: "";
     position: absolute;
@@ -40,21 +157,13 @@ body {
     background-size: 150% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-mask-image: linear-gradient(
-        to bottom,
-        black 95%,
-        transparent 100%
-    );
-    mask-image: linear-gradient(
-        to bottom,
-        black 95%,
-        transparent 100%
-    );
+    -webkit-mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 95%, transparent 100%);
     z-index: -1;
     pointer-events: none;
 }
 
-/* Text for hero section */
+/* Hero text */
 .hero-text {
     position: relative;
     z-index: 5;
@@ -66,7 +175,7 @@ body {
 
 .hero-title {
     max-width: 700px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 20px;
     font-family: 'Tsukimi Rounded', sans-serif;
     font-size: 85px;
@@ -79,7 +188,7 @@ body {
 
 .hero-desc {
     max-width: 450px;
-    margin: 0px;
+    margin: 0;
     font-size: 22px;
     color: #4a2603;
     line-height: 1.4;
@@ -87,7 +196,7 @@ body {
     animation: fadeInLeft 0.7s forwards 0.3s;
 }
 
-/* Treat yourself today button */
+/* CTA Button */
 .cta-btn {
     margin-top: auto;
     align-self: flex-start;
@@ -105,39 +214,14 @@ body {
     animation: fadeInLeft 0.7s forwards 0.5s;
 }
 
-/* -----------------------------------
-   ANIMATIONS
------------------------------------ */
-
-@keyframes fadeInLeft {
-    0% { opacity: 0; transform: translateX(-20px); }
-    100% { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes comeFront {
-    0% {
-        opacity: 0;
-        transform: scale(0.8) translateZ(-200px) rotate(calc(var(--r) * -1))
-;
-        filter: blur(6px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateZ(120px) rotate(calc(var(--r) * -1));
-        filter: blur(0);
-    }
-}
 
 /* -----------------------------------
-   HERO SECTION PRODUCT LAYER
+   HERO PRODUCTS (3D LAYER)
 ----------------------------------- */
 
 .product-layer {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     pointer-events: none;
     transform-style: preserve-3d;
     z-index: 4;
@@ -146,12 +230,13 @@ body {
 .product {
     position: absolute;
     opacity: 0;
-    animation: comeFront 0.9s cubic-bezier(.22,.61,.36,1) forwards;
+    animation: comeFront 0.9s cubic-bezier(.22, .61, .36, 1) forwards;
     will-change: transform, opacity, filter;
 }
 
+
 /* -----------------------------------
-   HERO SECTION ARROWS
+   HERO ARROWS
 ----------------------------------- */
 
 .arrow {
@@ -167,12 +252,11 @@ body {
 
 
 /* ===============================
-   PRODUCTS / OUR SERIES SECTION
+   PRODUCTS / OUR SERIES
 ================================ */
 
 #products {
     width: 100%;
-    height: auto;
     background-image: url('/assets/images/backgrounds/product-series-bg.png');
     background-size: 100% auto;
     background-position: center 60px;
@@ -182,8 +266,22 @@ body {
     font-family: 'Tsukimi Rounded', sans-serif;
 }
 
-/* Products title */
-.products-title {
+/* Fade-in trigger */
+.products-section.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.products-section.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease;
+}
+
+
+/* Titles (Products & Story) */
+.products-title,
+.story-title {
     text-align: center;
     font-size: 80px;
     font-weight: 700;
@@ -193,15 +291,14 @@ body {
     letter-spacing: 3px;
 }
 
-/* Wrap text naturally with the lines (design) */
-.products-title span {
+.products-title span,
+.story-title span {
     position: relative;
     display: inline-block;
-    padding: 0;
 }
 
-/* Top line - matches text width */
-.products-title span::before {
+.products-title span::before,
+.story-title span::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -212,8 +309,8 @@ body {
     transform: translateX(-50%);
 }
 
-/* Bottom line - matches text width */
-.products-title span::after {
+.products-title span::after,
+.story-title span::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -224,35 +321,27 @@ body {
     transform: translateX(-50%);
 }
 
-/* Top circle */
-.products-title::before {
+.products-title::before,
+.story-title::before,
+.products-title::after,
+.story-title::after {
     content: "";
     position: absolute;
     width: 16px;
     height: 16px;
     background: #271209;
     border-radius: 50%;
-    top: -18px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Bottom circle */
-.products-title::after {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: #271209;
-    border-radius: 50%;
-    bottom: -18px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+.products-title::before,
+.story-title::before { top: -18px; }
 
-/* -----------------------------------
-   CARD CONTAINER
------------------------------------ */
+.products-title::after,
+.story-title::after { bottom: -18px; }
+
+/* Cards container */
 .products-container {
     display: flex;
     flex-wrap: wrap;
@@ -260,7 +349,7 @@ body {
     gap: 30px 60px;
 }
 
-/* CARDS */
+/* Card base */
 .product-card {
     width: 380px;
     height: 300px;
@@ -275,7 +364,7 @@ body {
     padding-bottom: 40px;
 }
 
-/* Background image */
+/* Background */
 .card-bg {
     position: absolute;
     inset: 0;
@@ -285,16 +374,15 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Product image (customizable per card) */
+/* Product */
 .product-img {
     width: var(--img-width, 35%);
     z-index: 2;
-    transition: transform .35s cubic-bezier(.22,.61,.36,1);
+    transition: transform .35s cubic-bezier(.22, .61, .36, 1);
     transform-origin: bottom center;
-    transform: translateY(0) scale(var(--img-scale, 1));
 }
 
-/* Ellipse shadow (customizable per card) */
+/* Shadow */
 .product-card .shadow {
     position: absolute;
     bottom: var(--shadow-y, 50px);
@@ -305,27 +393,24 @@ body {
     background: rgba(0, 0, 0, 0.25);
     filter: blur(1px);
     border-radius: 50%;
-    transition: all 0.2s ease;
     z-index: 1;
 }
 
-/* Product name */
+/* Name */
 .product-name {
     position: absolute;
     bottom: 1px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
-    color: #fff;
+    color: white;
     font-size: 20px;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     font-weight: 800;
 }
 
-/* -----------------------------------
-  HOVER EFFECT
------------------------------------ */
+/* Hover */
 .product-card:hover .card-bg {
     transform: scale(1);
 }
@@ -336,4 +421,166 @@ body {
 
 .product-card:hover .shadow {
     transform: translateX(-50%) scale(var(--hover-scale, 1.3));
+}
+
+
+/* -----------------------------------
+   ABOUT US SECTION
+----------------------------------- */
+
+#about-us {
+    position: relative;
+    background: #FBF1CB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 120px;
+    width: 100%;
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
+
+.about-content {
+    position: relative;
+    text-align: center;
+    max-width: 900px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.about-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Logo + Circle */
+.circle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 30px auto 50px;
+}
+
+.circle-bg {
+    width: 200px;
+    height: 200px;
+    background: #462211;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-main {
+    width: 275px;
+    height: 275px;
+    background: url('/assets/images/ui/logo.png') center/contain no-repeat;
+}
+
+.logo-text {
+    width: 320px;
+    height: 160px;
+    background: url('/assets/images/ui/logo-text.png') center/contain no-repeat;
+}
+
+/* Story text */
+.story-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #271209;
+    padding: 0 50px;
+}
+
+
+/* Decorative circles */
+.paragraph-decor {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: #C55E05;
+    border-radius: 50%;
+    filter: blur(2px);
+    z-index: -1;
+    top: 75%;
+}
+
+.paragraph-decor.left { left: -120px; }
+.paragraph-decor.right { right: -120px; }
+
+/* Floating blobs */
+.ellipse {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+}
+
+.ellipse.show { opacity: 1; }
+
+.ellipse-205 {
+    width: 330px;
+    height: 330px;
+    top: 100px;
+    right: -120px;
+    background: #C55E05;
+}
+
+.ellipse-206 {
+    width: 260px;
+    height: 260px;
+    top: 100px;
+    left: -120px;
+    background: #462211;
+}
+
+.ellipse-207 {
+    width: 380px;
+    height: 380px;
+    bottom: 100px;
+    left: -150px;
+    background: #F3C800;
+}
+
+.ellipse-208 {
+    width: 220px;
+    height: 220px;
+    bottom: 80px;
+    right: -80px;
+    background: #462211;
+}
+
+
+/* -----------------------------------
+   ANIMATIONS
+----------------------------------- */
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes comeFront {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateZ(-200px) rotate(calc(var(--r) * -1));
+        filter: blur(6px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateZ(120px) rotate(calc(var(--r) * -1));
+        filter: blur(0);
+    }
 }
