@@ -1,0 +1,126 @@
+/* ===================== FOOTER SECTION ===================== */
+
+.footer {
+    width: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(251, 241, 203, 0.8) 0%,
+        #F1A901 24.04%,
+        #C55E05 45.19%,
+        #8B420C 70.19%,
+        #512713 95.67%
+    );
+    color: #FBF1CB;
+    padding: 80px 90px 40px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Layout grid (same structure as the picture) */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.7fr 0.9fr 1fr;
+    gap: 60px;
+}
+
+/* ---------------- LEFT SIDE (Logo + Description) ---------------- */
+
+.footer-logo-circle {
+  width: 140px;
+  height: 140px;
+  background: #462211;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* debug helper (remove when done): outline: 1px dashed lime; */
+}
+
+.footer-logo {
+  display: block;       /* important to remove inline baseline behaviour */
+  width: 80%;           /* scale image as needed */
+  height: auto;
+  object-fit: contain;
+  margin: 0;            /* ensure no stray margins */
+  padding: 0;
+  filter: drop-shadow(0px 4px 5px rgba(0,0,0,0.25));
+}
+
+
+.footer-desc {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+    max-width: 400px;
+}
+
+/* ---------------- ALL PAGES ---------------- */
+
+.footer-pages h3,
+.footer-contact h3,
+.footer-location h3 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #FBF1CB;
+}
+
+.footer-pages a {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 12px 0;
+    color: #FBF1CB;
+    text-decoration: none;
+}
+
+/* ---------------- CONTACT US ---------------- */
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.icon-circle {
+    width: 35px;
+    height: 35px;
+    border: 3px solid #FBF1CB;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+
+.icon-circle img {
+    width: 15px;
+    height: 15px;
+}
+
+/* ---------------- LOCATION ---------------- */
+
+.footer-location p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 220px;
+}
+
+/* ---------------- FOOTER BOTTOM ---------------- */
+
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.footer-bottom hr {
+    width: 80%;
+    margin: auto; 
+    border: 1px solid rgba(251,241,203,0.5);
+}
+
+.footer-bottom p {
+    margin-top: 15px;
+    font-size: 16px;
+    opacity: 0.9;
+}
