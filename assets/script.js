@@ -12,7 +12,7 @@ const slides = [
     desc: "Richly brewed tea meets silky milk and chewy pearls for the perfect blend of comfort and flavor in every sip.",
 
     main: {
-      src: "assets/images/products/milk-tea/green-milk-tea.png",
+      src: "/assets/images/products/milk-tea/green-milk-tea.png",
       left: "32%",
       top: "34.8%",
       width: "402.29px",
@@ -21,7 +21,7 @@ const slides = [
     },
 
     main2: {
-      src: "assets/images/products/milk-tea/red-milk-tea.png",
+      src: "/assets/images/products/milk-tea/red-milk-tea.png",
       left: "53%",
       top: "-2%",
       width: "327.27px",
@@ -30,7 +30,7 @@ const slides = [
     },
 
     main3: {
-      src: "assets/images/products/milk-tea/blue-milk-tea.png",
+      src: "/assets/images/products/milk-tea/blue-milk-tea.png",
       left: "64%",
       top: "41%",
       width: "400.79px",
@@ -39,11 +39,11 @@ const slides = [
     },
 
     elements: [
-      { src: "assets/images/ingredients/milk-tea/pearls-1.png", left: "38.6%", top: "23.9%", width: "252px", height: "152px", rotate: "0deg" },
-      { src: "assets/images/ingredients/milk-tea/pearls-2.png", left: "56.1%", top: "55.4%", width: "200px", height: "215px", rotate: "0deg" },
-      { src: "assets/images/ingredients/milk-tea/pearls-3.png", left: "73%", top: "20.4%", width: "315px", height: "267px", rotate: "0deg" },
-      { src: "assets/images/ingredients/milk-tea/boba-pearl.png", left: "26%", top: "68%", width: "113px", height: "113px", rotate: "0deg" },
-      { src: "assets/images/ingredients/milk-tea/boba-pearl.png", left: "87%", top: "80%", width: "113px", height: "113px", rotate: "0deg" }
+      { src: "/assets/images/ingredients/milk-tea/pearls-1.png", left: "38.6%", top: "23.9%", width: "252px", height: "152px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/milk-tea/pearls-2.png", left: "56.1%", top: "55.4%", width: "200px", height: "215px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/milk-tea/pearls-3.png", left: "73%", top: "20.4%", width: "315px", height: "267px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/milk-tea/boba-pearl.png", left: "26%", top: "68%", width: "113px", height: "113px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/milk-tea/boba-pearl.png", left: "87%", top: "80%", width: "113px", height: "113px", rotate: "0deg" }
     ]
   },
 
@@ -53,7 +53,7 @@ const slides = [
     desc: "Freshly brewed tea meets juicy fruit and chewy jelly for a sweet, refreshing fusion in every sip.",
 
     main: {
-      src: "assets/images/products/fruit-tea/fruit-tea-blue-red.png",
+      src: "/assets/images/products/fruit-tea/fruit-tea-blue-red.png",
       left: "28.3%",
       top: "-0.9%",
       width: "608px",
@@ -62,7 +62,7 @@ const slides = [
     },
 
     main2: {
-      src: "assets/images/products/fruit-tea/fruit-tea-blue-green.png",
+      src: "/assets/images/products/fruit-tea/fruit-tea-blue-green.png",
       left: "48.1%",
       top: "33.5%",
       width: "552.25px",
@@ -71,7 +71,7 @@ const slides = [
     },
 
     main3: {
-      src: "assets/images/products/fruit-tea/fruit-tea-blue-violet.png",
+      src: "/assets/images/products/fruit-tea/fruit-tea-blue-violet.png",
       left: "59.9%",
       top: "2.6%",
       width: "608.98px",
@@ -80,11 +80,11 @@ const slides = [
     },
 
     elements: [
-      { src: "assets/images/ingredients/fruit-tea/jelly-cubes-1.png", left: "34.9%", top: "52.5%", width: "407.43px", height: "297.5px", rotate: "0deg" },
-      { src: "assets/images/ingredients/fruit-tea/jelly-cubes-2.png", left: "77.7%", top: "65%", width: "285.97px", height: "219.97px", rotate: "0deg" },
-      { src: "assets/images/ingredients/fruit-tea/jelly-cubes-3.png", left: "61%", top: "8%", width: "228.98px", height: "270.28px", rotate: "0deg" },
-      { src: "assets/images/ingredients/fruit-tea/white-jelly-cube.png", left: "38.6%", top: "27.1%", width: "110.69px", height: "110.69px", rotate: "-76.34deg" },
-      { src: "assets/images/ingredients/fruit-tea/white-jelly-cube.png", left: "91.7%", top: "38.3%", width: "110.69px", height: "110.69px", rotate: "-166.76deg" }
+      { src: "/assets/images/ingredients/fruit-tea/jelly-cubes-1.png", left: "34.9%", top: "52.5%", width: "407.43px", height: "297.5px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/fruit-tea/jelly-cubes-2.png", left: "77.7%", top: "65%", width: "285.97px", height: "219.97px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/fruit-tea/jelly-cubes-3.png", left: "61%", top: "8%", width: "228.98px", height: "270.28px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/fruit-tea/white-jelly-cube.png", left: "38.6%", top: "27.1%", width: "110.69px", height: "110.69px", rotate: "-76.34deg" },
+      { src: "/assets/images/ingredients/fruit-tea/white-jelly-cube.png", left: "91.7%", top: "38.3%", width: "110.69px", height: "110.69px", rotate: "-166.76deg" }
     ]
   },
 
@@ -94,7 +94,7 @@ const slides = [
     desc: "Crispy golden fries coated in bold, savory flavors for the ultimate crunchy indulgence.",
 
     main: {
-      src: "assets/images/products/fries/chili-bbq.png",
+      src: "/assets/images/products/fries/chili-bbq.png",
       left: "35.2%",
       top: "17.3%",
       width: "482px",
@@ -103,7 +103,7 @@ const slides = [
     },
 
     main2: {
-      src: "assets/images/products/fries/sour-cream.png",
+      src: "/assets/images/products/fries/sour-cream.png",
       left: "61.6%",
       top: "8.3%",
       width: "379px",
@@ -112,7 +112,7 @@ const slides = [
     },
 
     main3: {
-      src: "assets/images/products/fries/cheese.png",
+      src: "/assets/images/products/fries/cheese.png",
       left: "56.6%",
       top: "35.3%",
       width: "523px",
@@ -121,10 +121,10 @@ const slides = [
     },
 
     elements: [
-      { src: "assets/images/ingredients/fries/fries-1.png", left: "33.1%", top: "0.6%", width: "454.38px", height: "298.51px", rotate: "0deg" },
-      { src: "assets/images/ingredients/fries/fries-2.png", left: "37.4%", top: "50.6%", width: "413.84px", height: "335.49px", rotate: "0deg" },
-      { src: "assets/images/ingredients/fries/fries-3.png", left: "83.5%", top: "0.1%", width: "187.86px", height: "368.19px", rotate: "0deg" },
-      { src: "assets/images/ingredients/fries/fries-4.png", left: "86.8%", top: "65.8%", width: "162px", height: "142px", rotate: "0deg" }
+      { src: "/assets/images/ingredients/fries/fries-1.png", left: "33.1%", top: "0.6%", width: "454.38px", height: "298.51px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/fries/fries-2.png", left: "37.4%", top: "50.6%", width: "413.84px", height: "335.49px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/fries/fries-3.png", left: "83.5%", top: "0.1%", width: "187.86px", height: "368.19px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/fries/fries-4.png", left: "86.8%", top: "65.8%", width: "162px", height: "142px", rotate: "0deg" }
     ]
   },
 
@@ -134,7 +134,7 @@ const slides = [
     desc: "Juicy, stacked burgers layered with bold flavors, fresh toppings, and irresistible savory goodness.",
 
     main: {
-      src: "assets/images/products/burger/ham-and-egg.png",
+      src: "/assets/images/products/burger/ham-and-egg.png",
       left: "31.3%",
       top: "37.2%",
       width: "612px",
@@ -143,7 +143,7 @@ const slides = [
     },
 
     main2: {
-      src: "assets/images/products/burger/bacon.png",
+      src: "/assets/images/products/burger/bacon.png",
       left: "51.6%",
       top: "4.3%",
       width: "646px",
@@ -152,10 +152,10 @@ const slides = [
     },
 
     elements: [
-      { src: "assets/images/ingredients/burger/burgers-1.png", left: "38%", top: "1.6%", width: "356.21px", height: "491px", rotate: "0deg" },
-      { src: "assets/images/ingredients/burger/burgers-2.png", left: "68.7%", top: "50%", width: "433.14px", height: "428.4px", rotate: "0deg" },
-      { src: "assets/images/ingredients/burger/lettuce-leaf.png", left: "21.7%", top: "61.6%", width: "187.82px", height: "187.82px", rotate: "127.73deg" },
-      { src: "assets/images/ingredients/burger/lettuce-leaf.png", left: "86.6%", top: "3.6%", width: "187.82px", height: "187.82px", rotate: "53.53deg" }
+      { src: "/assets/images/ingredients/burger/burgers-1.png", left: "38%", top: "1.6%", width: "356.21px", height: "491px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/burger/burgers-2.png", left: "68.7%", top: "50%", width: "433.14px", height: "428.4px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/burger/lettuce-leaf.png", left: "21.7%", top: "61.6%", width: "187.82px", height: "187.82px", rotate: "127.73deg" },
+      { src: "/assets/images/ingredients/burger/lettuce-leaf.png", left: "86.6%", top: "3.6%", width: "187.82px", height: "187.82px", rotate: "53.53deg" }
     ]
   },
 
@@ -165,7 +165,7 @@ const slides = [
     desc: "A sweet, layered treat with crunchy grahams, creamy fillings, and rich flavors in every bite.",
 
     main: {
-      src: "assets/images/products/graham-bar/cookies.png",
+      src: "/assets/images/products/graham-bar/cookies.png",
       left: "36.3%",
       top: "11%",
       width: "435px",
@@ -174,7 +174,7 @@ const slides = [
     },
 
     main2: {
-      src: "assets/images/products/graham-bar/chocomallows.png",
+      src: "/assets/images/products/graham-bar/chocomallows.png",
       left: "66.9%",
       top: "11%",
       width: "450px",
@@ -183,7 +183,7 @@ const slides = [
     },
 
     main3: {
-      src: "assets/images/products/graham-bar/ube.png",
+      src: "/assets/images/products/graham-bar/ube.png",
       left: "52.7%",
       top: "23%",
       width: "433px",
@@ -192,9 +192,9 @@ const slides = [
     },
 
     elements: [
-      { src: "assets/images/ingredients/graham-bar/grahams-1.png", left: "32.2%", top: "43.3%", width: "405.29px", height: "498.5px", rotate: "0deg" },
-      { src: "assets/images/ingredients/graham-bar/grahams-2.png", left: "43.9%", top: "0.3%", width: "692.66px", height: "339.39px", rotate: "0deg" },
-      { src: "assets/images/ingredients/graham-bar/grahams-3.png", left: "69.8%", top: "60.1%", width: "427.79px", height: "295.43px", rotate: "0deg" }
+      { src: "/assets/images/ingredients/graham-bar/grahams-1.png", left: "32.2%", top: "43.3%", width: "405.29px", height: "498.5px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/graham-bar/grahams-2.png", left: "43.9%", top: "0.3%", width: "692.66px", height: "339.39px", rotate: "0deg" },
+      { src: "/assets/images/ingredients/graham-bar/grahams-3.png", left: "69.8%", top: "60.1%", width: "427.79px", height: "295.43px", rotate: "0deg" }
     ]
   }
 ];
