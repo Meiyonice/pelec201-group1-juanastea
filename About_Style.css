@@ -1,0 +1,973 @@
+/*
+ * ⚠️ WARNING: This CSS is a direct, literal translation of the provided design code.
+ * It uses absolute positioning and fixed pixel values extensively, which is
+ * NOT suitable for a responsive, modern website.
+ * It is expected to only display correctly at a 1440px viewport width.
+ */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #FBF1CB;
+}
+
+/* Base Fonts from the provided code */
+.frame-19 * {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.our-story-text, .juana-experience-text, .where-flavor-meets-comfort-text, .mission-vision-text {
+    font-family: 'Tsukimi Rounded', sans-serif;
+}
+
+/* Frame 19 - Main Container */
+.frame-19 {
+    position: absolute;
+    width: 1440px;
+    height: 5262px; /* New height: 4652px (End of Map) + 610px (Footer) = 5262px */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0px;
+    background-color: #FBF1CB;
+}
+
+/* --- BACKGROUNDS (BG Pattern & OUR STORY BG) --- */
+
+.bg-pattern-2 {
+    position: absolute;
+    width: 1440px;
+    height: 1115px;
+    left: 0px;
+    top: 1561px;
+    background: url(product_series_bg.png);
+    background-size: cover;
+    background-repeat: repeat;
+    opacity: 100;
+}
+
+/* Frame 21 - OUR STORY Section Container */
+.frame-21 {
+    position: absolute;
+    width: 1440px;
+    height: 1279px;
+    left: 0px;
+    top: 115px;
+}
+
+/* OUR STORY Background Image */
+.our-story-bg-1 {
+    position: absolute;
+    width: 1440px;
+    height: 1279px;
+    left: 0px;
+    top: 0px;
+    background: url(OUR\ STORY\ BG.png);
+    background-size: cover;
+}
+
+
+/* --- STORY SECTION (Frame 21 Content) --- */
+
+/* Header Group 88 for OUR STORY */
+.story-header {
+    position: absolute;
+    width: 580px;
+    height: 250px; 
+    left: 428px;
+    top: 76px;
+}
+.story-header .header-line-1 { position: absolute; width: 580px; height: 12px; left: 0; top: 106px; }
+.story-header .header-line-2 { position: absolute; width: 580px; height: 12px; left: 0; top: 230px; }
+
+.story-header .line-1, .story-header .line-2 {
+    position: absolute; width: 580px; height: 0px; left: 0; border: 5px solid #271209; top: 8px;
+}
+
+.story-header .line-end-dot {
+    position: absolute; width: 15px; height: 15px; left: 282.5px; /* Centered dot: 580/2 - 15/2 = 282.5 */ background: #271209; border-radius: 50%; top: 5px;
+}
+
+.our-story-text {
+    position: absolute;
+    width: 578px;
+    height: 200px;
+    left: 10px;
+    top: 80px;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 123px;
+    display: flex;
+    align-items: center;
+    color: #271209;
+}
+
+.juana-story-text {
+    position: absolute;
+    width: 728px;
+    height: 228px;
+    left: 356px;
+    top: 652px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #271209;
+}
+
+.center-graphic-3-11 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 450px;
+    top: 250px;
+    background: url(JUANA_LOGO.png);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+/* --- JUANA EXPERIENCE SECTION (Frame 15) --- */
+.frame-15 {
+    position: absolute;
+    width: 1309px;
+    height: 495px;
+    left: -37px;
+    top: 1554px;
+    background: #F1A901;
+    opacity: 0.9;
+    border-radius: 0px 100px 100px 0px;
+}
+
+/* Header Group 88 for The Juana Experience */
+.experience-header {
+    position: absolute;
+    width: 716px;
+    height: 200px;
+    left: 118px;
+    top: 0px;
+}
+.experience-header .header-line-1 { position: absolute; width: 578px; height: 12px; left: 0; top: 43px; }
+.experience-header .header-line-2 { position: absolute; width: 578px; height: 12px; left: 0; top: 146px; }
+
+.experience-header .line-1, .experience-header .line-2 {
+    position: absolute; width: 578px; height: 0px; left: 0; border: 5px solid #271209; top: 8px;
+}
+
+.experience-header .line-end-dot {
+    position: absolute; width: 15px; height: 15px; left: 281.5px; background: #271209; border-radius: 50%; top: 5px;
+}
+
+.juana-experience-text {
+    position: absolute;
+    width: 716px;
+    height: 200px;
+    left: 0;
+    top: 5px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    color: #271209;
+}
+
+.experience-description {
+    position: absolute;
+    width: 726px;
+    height: 269px;
+    left: 118px;
+    top: 189px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    color: #271209;
+}
+
+.experience-image-container {
+    position: absolute;
+    width: 313px;
+    height: 392px;
+    left: 926px;
+    top: 51px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.image-133, .image-134 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -115px;
+    top: -100px;
+    background: url(milktea.jpg);
+}
+
+
+/* --- WHERE FLAVOR MEETS COMFORT SECTION (Frame 16) --- */
+.frame-16 {
+    position: absolute;
+    width: 1309px;
+    height: 495px;
+    left: 182px;
+    top: 2181px;
+    background: #F1A901;
+    opacity: 0.9;
+    border-radius: 0px 100px 100px 0px;
+    /* Literal horizontal flip */
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* Un-flip all children of Frame 16 */
+.frame-16 > * {
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    direction: rtl; 
+}
+
+/* Header Group 88 for Where Flavor Meets Comfort */
+.comfort-header {
+    position: absolute;
+    width: 766px;
+    height: 200px;
+    left: 426px;
+    top: 0px;
+}
+.comfort-header .header-line-1 { position: absolute; width: 765px; height: 12px; left: 0; top: 43px; }
+.comfort-header .header-line-2 { position: absolute; width: 765px; height: 12px; left: 0; top: 146px; }
+
+.comfort-header .line-1, .comfort-header .line-2 {
+    position: absolute; width: 765px; height: 0px; left: 0; border: 5px solid #271209; top: 8px;
+}
+
+.comfort-header .line-end-dot {
+    position: absolute; width: 15px; height: 15px; left: 375px; background: #271209; border-radius: 50%; top: 5px;
+}
+
+.where-flavor-meets-comfort-text {
+    position: absolute;
+    width: 766px;
+    height: 200px;
+    left: 0;
+    top: 10px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    color: #271209;
+    direction: ltr;
+}
+
+.comfort-description {
+    position: absolute;
+    width: 765px;
+    height: 150px;
+    left: 426px;
+    top: 248px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    color: #271209;
+    direction: ltr;
+    text-align: left;
+}
+
+.comfort-image-container {
+    position: absolute;
+    width: 313px;
+    height: 392px;
+    left: 64px;
+    top: 55px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    overflow: hidden;
+    direction: ltr;
+}
+
+.comfort-image-container .image-135 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -50px;
+    top: 0px;
+    background: url(fries.jpg);
+    transform: matrix(-1, 0, 0, 1, 0, 0); 
+}
+
+/* --- MISSION VISION SECTION --- */
+
+.mission-vision-section {
+    position: absolute;
+    width: 1440px;
+    height: 1148px;
+    left: 0px;
+    top: 2676px;
+}
+
+.mission-vision-section .bg-pattern-3 {
+    position: absolute;
+    width: 1440px;
+    height: 1115px;
+    left: 0px;
+    top: 16px;
+    background: url(product_series_bg.png);
+    background-size: cover;
+}
+
+/* Header Group 89 for MISSION & VISION */
+.mission-vision-section .group-89 {
+    position: absolute;
+    width: 517px;
+    height: 200px;
+    left: 462px;
+    top: 200px;
+}
+.mission-vision-section .header-line-1 { position: absolute; width: 513px; height: 12px; left: 0; top: 43px; }
+.mission-vision-section .header-line-2 { position: absolute; width: 513px; height: 12px; left: 0; top: 146px; }
+
+.mission-vision-section .line-1, .mission-vision-section .line-2 {
+    position: absolute; width: 513px; height: 0px; left: 0; border: 5px solid #271209; top: 8px;
+}
+
+.mission-vision-section .line-end-dot {
+    position: absolute; width: 15px; height: 15px; left: 249px; background: #271209; border-radius: 50%; top: 5px;
+}
+
+.mission-vision-text {
+    position: absolute;
+    width: 517px;
+    height: 200px;
+    left: 0;
+    top: 10px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    color: #271209;
+}
+
+/* Background Rectangle */
+.mv-background-rect {
+    position: absolute;
+    width: 1536px;
+    height: 587px;
+    left: calc(50% - 1536px/2 + 5px);
+    top: calc(50% - 587px/2 + 172px);
+    background: linear-gradient(180deg, #F1A901 0%, #C55E05 100%);
+}
+
+/* Image 1 (Mission) - Clickable target - Base Styles */
+.image-mission {
+    position: absolute;
+    width: 360px;
+    height: 415px;
+    left: 370px;
+    top: 36%;
+    transform: translateY(118px);
+    background: url(mission\ &\ vision\ .png);
+    background-size: 250%;
+    background-position: 20%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    z-index: 5;
+}
+
+/* Image 2 (Vision) - Clickable target - Base Styles */
+.image-vision {
+    position: absolute;
+    width: 360px;
+    height: 415px;
+    left: 740px;
+    top: 36%;
+    transform: translateY(118px);
+    background: url(mission\ &\ vision\ .png);
+    background-size: 250%;
+    background-position: 90%;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    z-index: 5;
+}
+
+/* MISSION ACTIVE STATE: Mission image (Left) is clicked, it gets larger and slides a little right */
+.image-mission.active {
+    width: 440px;
+    height: 507px;
+    left: 300px;
+    transform: translateY(68px);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+    z-index: 15;
+}
+/* VISION SLID STATE: Other image moves aside */
+.image-vision.slid { 
+    opacity: 0.5;
+    left: 790px;
+}
+
+
+/* VISION ACTIVE STATE: Vision image (Right) is clicked, it gets larger and slides a little left */
+.image-vision.active {
+    width: 440px;
+    height: 507px;
+    left: 700px;
+    transform: translateY(68px);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+    z-index: 15;
+}
+/* MISSION SLID STATE: Other image moves aside */
+.image-mission.slid { 
+    opacity: 0.5;
+    left: 320px;
+}
+
+
+/* --- MODAL CONTENT BOXES --- */
+
+.modal-content-box {
+    display: none;
+    position: absolute;
+    width: 380px;
+    z-index: 10;
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.25));
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* MISSION BOX Positioned to the right of the active Mission Image (Left) */
+.mission-box.active {
+    display: block;
+    opacity: 1;
+    top: 550px;
+    left: 770px; 
+    pointer-events: auto;
+}
+
+/* VISION BOX Positioned to the left of the active Vision Image (Right) */
+.vision-box.active {
+    display: block;
+    opacity: 1;
+    top: 550px;
+    left: 230px;
+    pointer-events: auto;
+}
+
+.modal-content-box .content-group {
+    width: 100%;
+    height: 209px;
+    background: #FFFAF5;
+    border-radius: 10px;
+    padding: 15px 12px;
+    box-sizing: border-box;
+}
+
+.modal-content-box .title {
+    font-family: 'Tsukimi Rounded';
+    font-weight: 700;
+    font-size: 32px;
+    color: #462211;
+    margin-bottom: 5px;
+}
+
+.modal-content-box .description {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: #462211;
+    text-align: justify;
+}
+
+
+/* ========================================= */
+/* --- MAPS SECTION --- */
+/* ========================================= */
+
+.map-section {
+    position: absolute;
+    width: 1440px;
+    height: 828px;
+    left: 0px;
+    top: 3824px; /* Positioned after MV section (2676 + 1148) */
+}
+
+/* Maps Container is a wrapper for the image with overflow: hidden */
+.map-section .maps-container {
+    position: absolute;
+    width: 1440px; 
+    height: 673px;
+    left: 0;
+    top: 50px; /* Maps starts 50px down from the section top */
+    overflow: hidden;
+}
+
+/* Maps Image */
+.map-section .maps-image-1 {
+    position: absolute;
+    width: 1877px;
+    height: 673px;
+    left: -218px;
+    top: 0px; 
+    background: url(maps.png);
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Frame 14 (Contact Box) */
+.map-section .frame-14 {
+    position: absolute;
+    width: 438px;
+    height: 454px;
+    left: 96px;
+    top: 148px;
+    background: #FDBF18;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 0; 
+    margin: 0;
+}
+
+/* Inner elements are positioned relative to .frame-14 (Contact Box) */
+.map-section .frame-14 > * {
+    position: absolute;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* Store Hours */
+.store-hours-text {
+    width: 151px;
+    height: 38px;
+    left: 43px;
+    top: 46px; 
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: left;
+    color: #271209;
+}
+.day-range {
+    width: 146px;
+    height: 29px;
+    left: 43px;
+    top: 93px; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #271209;
+    text-align: left;
+}
+.time-range {
+    width: 145px;
+    height: 29px;
+    left: 250px;
+    top: 93px; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #271209;
+    text-align: left;
+}
+
+/* Line 16 Divider (Below Store Hours) */
+.line-16 {
+    width: 353px;
+    height: 0px;
+    left: 42px;
+    top: 144px; 
+    border-top: 1px solid #000000;
+    transform: rotate(-0.16deg);
+}
+
+/* Contact */
+.contact-text {
+    width: 106px;
+    height: 38px;
+    left: 43px;
+    top: 156px; 
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: left;
+    color: #271209;
+}
+.phone-label {
+    width: 146px;
+    height: 29px;
+    left: 43px;
+    top: 203px; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #271209;
+    text-align: left;
+}
+.phone-number {
+    width: 165px;
+    height: 29px;
+    left: 231px;
+    top: 203px; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #271209;
+    text-align: left;
+}
+
+/* Line 15 Divider (Below Contact) */
+.line-15 {
+    width: 353px;
+    height: 0px;
+    left: 43px;
+    top: 254px; 
+    border-top: 1px solid #000000;
+    transform: rotate(-0.16deg);
+}
+
+/* Address */
+.address-text {
+    width: 108px;
+    height: 38px;
+    left: 42px;
+    top: 266px; 
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: left;
+    color: #271209;
+}
+.address-details {
+    width: 353px;
+    height: auto; /* Allows text to wrap */
+    min-height: 29px;
+    left: 43px;
+    top: 313px; 
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #271209;
+    text-align: left;
+}
+
+/* View Location Button (Frame 117) */
+.view-location-button {
+    position: absolute;
+    width: 168px;
+    height: 41px;
+    left: 135px;
+    top: 376px; 
+    text-decoration: none;
+    
+    /* Use Flexbox for perfect centering text inside the button */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.view-location-button .frame-117.button-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #462211;
+    border-radius: 50px;
+}
+.view-location-button .view-location-text {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 1; 
+}
+
+/* Location Graphic */
+.map-section .location-graphic-1 {
+    position: absolute;
+    width: 245px;
+    height: 245px;
+    left: 876px;
+    top: 191px;
+    background: url(location_icon.png); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+
+
+/* ========================================= */
+/* --- FOOTER SECTION (NEW STYLES) --- */
+/* ========================================= */
+
+.footer-section {
+    position: absolute;
+    width: 1440px;
+    height: 610px;
+    left: 0px;
+    top: 4652px; /* Starts after the Map section (3824 + 828 = 4652) */
+}
+
+/* Footer background */
+.footer-bg {
+    position: absolute;
+    width: 1440px;
+    height: 610px;
+    left: 0px;
+    top: 0px;
+    background: #FDBF18;
+    box-shadow: inset 0px 2px 50px rgba(197, 94, 5, 0.74);
+}
+
+/* Graphic 3 11 */
+.graphic-3-11 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 100px;
+    top: -10px; 
+    background: url(JUANA_LOGO.png); /* Assuming an image named '3.png' for this graphic */
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Juana’s Tea is a family-grown brand... (Description) */
+.footer-description {
+    position: absolute;
+    width: 401px;
+    height: 121px;
+    left: 112px;
+    top: 299px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #462211;
+}
+
+/* All Pages Header */
+.all-pages-header {
+    position: absolute;
+    width: 124px;
+    height: 38px;
+    left: 622px;
+    top: 193px;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: center;
+    color: #462211;
+}
+
+/* Navigation Links */
+.nav-home, .nav-products, .nav-about-us {
+    position: absolute;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #462211;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.nav-home:hover, .nav-products:hover, .nav-about-us:hover {
+    color: #271209;
+}
+.nav-home {
+    width: 49px;
+    height: 24px;
+    left: 623px;
+    top: 247px;
+}
+.nav-products {
+    width: 73px;
+    height: 24px;
+    left: 623px;
+    top: 299px;
+}
+.nav-about-us {
+    width: 73px;
+    height: 28px;
+    left: 623px;
+    top: 353px;
+}
+
+
+/* Contact Us Header */
+.contact-us-header {
+    position: absolute;
+    width: 142px;
+    height: 38px;
+    left: 831px;
+    top: 193px;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: center;
+    color: #462211;
+}
+
+/* Phone Group (Group 94) */
+.contact-group-94 {
+    position: absolute;
+    width: 207px;
+    height: 35px;
+    left: 831px;
+    top: 242px;
+}
+.contact-group-94 .ellipse-208.phone-icon-bg {
+    box-sizing: border-box;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 0; 
+    top: 0; 
+    border: 3px solid #462211;
+    border-radius: 50%;
+}
+.contact-group-94 .phone-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 8px;
+    top: 8px; 
+    background: url(phone.png); 
+    background-size: contain;
+}
+.contact-group-94 .phone-number-footer {
+    position: absolute;
+    width: 163px;
+    height: 24px;
+    left: 44px; 
+    top: 3px; 
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #462211;
+}
+
+/* Email Group (Group 93) */
+.contact-group-93 {
+    position: absolute;
+    width: 223px;
+    height: 35px;
+    left: 831px;
+    top: 294px;
+}
+.contact-group-93 .ellipse-207.email-icon-bg {
+    box-sizing: border-box;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 0; 
+    top: 0; 
+    border: 3px solid #462211;
+    border-radius: 50%;
+}
+.contact-group-93 .email-icon-mail {
+    position: absolute;
+    width: 19px; 
+    height: 13px;
+    left: 8px; 
+    top: 11px;
+    background-color: #462211; 
+}
+.contact-group-93 .email-address {
+    position: absolute;
+    width: 180px;
+    height: 24px;
+    left: 44px; 
+    top: 3px; 
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #462211;
+}
+
+/* Location Header */
+.location-header {
+    position: absolute;
+    width: 112px;
+    height: 38px;
+    left: 1121px;
+    top: 193px;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 38px;
+    text-align: center;
+    color: #462211;
+}
+
+/* Location Address */
+.location-address {
+    position: absolute;
+    width: 217px;
+    height: 72px;
+    left: 1121px;
+    top: 248px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #462211;
+}
+
+
+/* Footer Bottom Group (Line and Copyright) */
+.footer-bottom-group {
+    /* Auto layout approximation */
+    position: absolute;
+    width: 1440px;
+    height: 95px; 
+    left: 0;
+    top: 517px; /* Positioned to center the line and copyright near the bottom of the 610px footer */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Line 12 */
+.footer-bottom-group .line-12 {
+    width: 1091px;
+    height: 0px;
+    border-top: 1px solid #462211;
+}
+
+/* Copyright Text */
+.footer-bottom-group .copyright-text {
+    width: 1440px;
+    height: 23px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    color: #462211;
+}
