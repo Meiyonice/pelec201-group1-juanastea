@@ -1,0 +1,1128 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* === ABOUT_US_STYLE.css === */
+
+body {
+    margin: 0;
+    background-color: #f0f0f0; 
+    /* --- CRITICAL FLOW CHANGES --- */
+    display: flex;
+    flex-direction: column; /* Stacks children (.frame-19 and .container) vertically */
+    align-items: center; /* Centers the 1440px blocks */
+}
+
+/* === FRAME 19 (Main Container) === */
+.frame-19 {
+    position: relative;
+    width: 1440px;
+    /* --- CRITICAL HEIGHT CHANGE --- */
+    height: 2750px; /* Allows the container to expand with content */
+    min-height: 2676px; /* Ensures existing absolute children are visible */
+    background: #FBF1CB; 
+    overflow: hidden; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-bottom:0;
+}
+
+/* === DECORATIVE BLOBS === */
+.ellipse-205 {
+    position: absolute;
+    width: 330px;
+    height: 329px;
+    left: 1034px;
+    top: 125px;
+    background: #C55E05;
+    filter: blur(2px);
+    border-radius: 50%;
+}
+
+.ellipse-206-blob {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    left: 108px;
+    top: 187px;
+    background: #462211;
+    filter: blur(2px);
+    border-radius: 50%;
+}
+
+.ellipse-207 {
+    position: absolute;
+    width: 398px;
+    height: 398px;
+    left: -213px;
+    top: 281px;
+    background: #F3C800;
+    filter: blur(2px);
+    border-radius: 50%;
+}
+
+.ellipse-208 {
+    position: absolute;
+    width: 214px;
+    height: 214px;
+    left: 1257px;
+    top: 284px;
+    background: #462211;
+    filter: blur(2px);
+    border-radius: 50%;
+}
+
+.ellipse-209 {
+    position: absolute;
+    width: 187.83px;
+    height: 193.23px;
+    left: -14px;
+    top: 564px;
+    background: #C55E05;
+    filter: blur(2px);
+    transform: rotate(-177.24deg);
+    border-radius: 50%;
+}
+
+.ellipse-210 {
+    position: absolute;
+    width: 522.74px;
+    height: 522.74px;
+    left: 1264px;
+    top: 607px;
+    background: #F3C800;
+    filter: blur(2px);
+    transform: rotate(-177.24deg);
+    border-radius: 50%;
+}
+
+.ellipse-211 {
+    position: absolute;
+    width: 350.16px;
+    height: 360.23px;
+    left: 1094.61px;
+    top: 1008.71px;
+    background: #C55E05;
+    filter: blur(2px);
+    transform: rotate(-177.24deg);
+    border-radius: 50%;
+}
+
+.ellipse-212 {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 12.16px;
+    top: 1027.23px;
+    background: #C55E05;
+    filter: blur(2px);
+    transform: rotate(-177.24deg);
+    border-radius: 50%;
+}
+
+.ellipse-200 {
+    position: absolute;
+    width: 144.48px;
+    height: 148.64px;
+    left: 928px;
+    top: 1234px;
+    background: #462211;
+    filter: blur(2px);
+    transform: rotate(-177.24deg);
+    border-radius: 50%;
+}
+
+
+/* === OUR STORY SECTION === */
+
+/* Center Image Backing */
+.group-89 {
+    position: absolute;
+    width: 261px;
+    height: 261px;
+    left: 486px;
+    top: 482px;
+}
+
+.ellipse-191 {
+    position: absolute;
+    width: 261px;
+    height: 261px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(0deg, #462211, #462211);
+    border-radius: 50%;
+}
+
+/* Center Images */
+.soafer-final-4 {
+    position: absolute;
+    width: 300.97px;
+    height: 300.45px;
+    /* Calculated from calc(50% - 224.97px/2 - 108.51px) */
+    left: 464px; 
+    top: 457px; /* Approx calculation based on visual center of ellipse 191 */
+    background: url('NAV LOGO.png');
+    background-size: cover;
+    z-index: 2;
+}
+
+.soafer-final-3 {
+    position: absolute;
+    width: 320px;
+    height: 157px;
+    left: 754px;
+    top: 534px;
+    background: url('SOAFER FINAL.png');
+    background-size: cover;
+    filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.25));
+    z-index: 3;
+}
+
+/* Header Text Group */
+.group-88-story {
+    position: absolute;
+    width: 580px;
+    height: 200px;
+    left: 420px;
+    top: 134px;
+}
+
+.our-story-title {
+    position: absolute;
+    width: 578px;
+    height: 200px;
+    left: 2px;
+    top: 0px;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 123px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #271209;
+}
+
+.story-paragraph {
+    position: absolute;
+    width: 728px;
+    height: 228px;
+    left: 356px;
+    top: 767px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #271209;
+}
+
+/* Reusable Header Lines */
+.header-line-1, .header-line-2 {
+    position: absolute;
+    width: 580px;
+    height: 12px;
+    left: 0;
+}
+.header-line-1 { top: 30px; }
+.header-line-2 { top: 154px; }
+
+.line-1, .line-2 {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    top: 4px;
+    border: 5px solid #271209;
+}
+
+.ellipse-line-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 285px; /* Centered visually */
+    top: -2px;
+    background: #271209;
+    border-radius: 50%;
+}
+
+
+/* === BACKGROUND PATTERN ICONS === */
+.our-series-background {
+    position: absolute;
+    width: 1440px;
+    height: 1115px;
+    left: 4px;
+    top: 1384px;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.icon {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Specific Icon Positions */
+.bubble-tea-1 { width: 150px; height: 150px; left: 31px; top: -15px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.fruit-1 { width: 130px; height: 130px; left: 214px; top: 78px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.beef-1 { width: 135px; height: 135px; left: 580px; top: 94px; background: url('beef (1).png'); transform: rotate(12.99deg); }
+.bubble-tea-7 { width: 150px; height: 150px; left: -73px; top: 539px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.bubble-tea-8 { width: 150px; height: 150px; left: 849px; top: 536px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.fruit-7 { width: 130px; height: 130px; left: 110px; top: 632px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.fruit-8 { width: 130px; height: 130px; left: 1032px; top: 629px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.fast-food-7 { width: 135px; height: 135px; left: 291px; top: 530px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.fast-food-8 { width: 135px; height: 135px; left: 1213px; top: 527px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.beef-4 { width: 135px; height: 135px; left: 476px; top: 648px; background: url('beef (1).png'); transform: rotate(12.99deg); }
+.beef-5 { width: 135px; height: 135px; left: 1410px; top: 629px; background: url('beef (1).png'); transform: rotate(12.99deg); }
+.cracker-6 { width: 135px; height: 135px; left: 667px; top: 548px; background: url('cracker (1).png'); transform: rotate(-26.88deg); }
+.cracker-7 { width: 135px; height: 135px; left: 1589px; top: 545px; background: url('cracker (1).png'); transform: rotate(-26.88deg); }
+.bubble-tea-2 { width: 150px; height: 150px; left: 970px; top: -6px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.fruit-2 { width: 130px; height: 130px; left: 1153px; top: 87px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.fast-food-2 { width: 135px; height: 135px; left: 1334px; top: -15px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.bubble-tea-3 { width: 150px; height: 150px; left: -15px; top: 259px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.bubble-tea-5 { width: 150px; height: 150px; left: -15px; top: 259px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.fruit-3 { width: 130px; height: 130px; left: 168px; top: 352px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.fruit-5 { width: 130px; height: 130px; left: 168px; top: 352px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.fast-food-3 { width: 135px; height: 135px; left: 349px; top: 250px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.fast-food-5 { width: 135px; height: 135px; left: 349px; top: 250px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.beef-2 { width: 135px; height: 135px; left: 534px; top: 368px; background: url('beef (1).png'); transform: rotate(12.99deg); }
+.beef-3 { width: 135px; height: 135px; left: 534px; top: 368px; background: url('beef (1).png'); transform: rotate(12.99deg); }
+.cracker-4 { width: 135px; height: 135px; left: 725px; top: 268px; background: url('cracker (1).png'); transform: rotate(-26.88deg); }
+.cracker-5 { width: 135px; height: 135px; left: 725px; top: 268px; background: url('cracker (1).png'); transform: rotate(-26.88deg); }
+.bubble-tea-4 { width: 150px; height: 150px; left: 924px; top: 268px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.bubble-tea-6 { width: 150px; height: 150px; left: 924px; top: 268px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.fruit-4 { width: 130px; height: 130px; left: 1107px; top: 361px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.fruit-6 { width: 130px; height: 130px; left: 1107px; top: 361px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.fast-food-4 { width: 135px; height: 135px; left: 1288px; top: 259px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.fast-food-6 { width: 135px; height: 135px; left: 1288px; top: 259px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.cracker-3 { width: 135px; height: 135px; left: 1619px; top: 18px; background: url('cracker (1).png'); transform: rotate(-26.88deg); }
+.cracker-2 { width: 135px; height: 135px; left: 1571px; top: 27px; background: url('cracker (1).png'); transform: rotate(-26.88deg); }
+.fast-food-12 { width: 135px; height: 135px; left: 1179px; top: 805px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.cracker-8 { width: 135px; height: 135px; left: 616px; top: 814px; background: url('cracker (1).png'); transform: rotate(-26.88deg); }
+.fast-food-9 { width: 135px; height: 135px; left: 240px; top: 796px; background: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+.bubble-tea-12 { width: 150px; height: 150px; left: 815px; top: 814px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.bubble-tea-9 { width: 150px; height: 150px; left: -141px; top: 807px; background: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.beef-7 { width: 135px; height: 135px; left: 1368px; top: 904px; background: url('beef (1).png'); transform: rotate(12.99deg); }
+.beef-6 { width: 135px; height: 135px; left: 425px; top: 914px; background: url('beef (1).png'); transform: rotate(12.99deg); }
+.fruit-12 { width: 130px; height: 130px; left: 998px; top: 907px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.fruit-9 { width: 130px; height: 130px; left: 61px; top: 934px; background: url('fruit (1).png'); transform: rotate(-34.63deg); }
+
+/* === FRAME 15 (The Juana Experience) === */
+.frame-15 {
+    position: absolute;
+    width: 1309px;
+    height: 495px;
+    left: -37px;
+    top: 1554px;
+    background: #F1A901;
+    opacity: 0.9;
+    border-radius: 0px 100px 100px 0px;
+    z-index: 5;
+}
+
+.group-88-exp {
+    position: absolute;
+    width: 716px;
+    height: 200px;
+    left: 118px;
+    top: 0px;
+}
+
+.juana-experience-title {
+    position: absolute;
+    width: 716px;
+    height: 200px;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    color: #271209;
+}
+
+.juana-text {
+    position: absolute;
+    width: 726px;
+    height: 269px;
+    left: 118px;
+    top: 189px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    color: #271209;
+}
+
+/* Specific Header Lines for Exp */
+.exp-header-line-1, .exp-header-line-2 {
+    position: absolute;
+    width: 578px;
+    height: 12px;
+    left: 118px;
+}
+.exp-header-line-1 { top: 43px; }
+.exp-header-line-2 { top: 146px; }
+
+/* Image Card Frame 3 */
+.frame-3-exp {
+    position: absolute;
+    width: 313px;
+    height: 392px;
+    left: 926px;
+    top: 1605px; /* Offset + top of Frame 15 (1554 + 51) */
+    background: #FFFFFF;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    z-index: 6;
+    overflow: hidden;
+}
+
+.image-133 {
+    position: absolute;
+    width: 422px;
+    height: 422px;
+    left: -55px;
+    top: -30px;
+    background: url('milktea.jpg');
+    background-size: cover;
+}
+
+/* === FRAME 16 (Where Flavor Meets Comfort) === */
+.frame-16 {
+    position: absolute;
+    width: 1309px;
+    height: 495px;
+    left: 182px;
+    top: 2181px;
+    background: #F1A901;
+    opacity: 0.9;
+    border-radius: 0px 100px 100px 0px;
+    transform: matrix(-1, 0, 0, 1, 0, 0); /* Horizontal Flip */
+    z-index: 5;
+}
+
+/* We need to unflip the text content so it's readable, 
+   but keep the positioning logic relative to the flipped parent 
+   or manually adjust coordinates. The Figma export suggests direct children.
+   Here we unflip the content wrapper. */
+.unflip-content {
+    width: 100%;
+    height: 100%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.group-88-flavor {
+    position: absolute;
+    width: 766px;
+    height: 200px;
+    /* Coordinates from Figma are often relative to the top-left of the bounding box. 
+       Since we flipped the parent, left: 426px visually becomes right side.
+       But we unflipped the content. We need to position relative to the unflipped context.
+       Visual approximation based on typical Figma flip behavior: */
+    right: 118px; /* Mirror of Frame 15's left: 118px */
+    top: 0px;
+}
+
+.flavor-title {
+    position: absolute;
+    width: 766px;
+    height: 200px;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+    color: #271209;
+}
+
+.flavor-text {
+    position: absolute;
+    width: 765px;
+    height: 150px;
+    right: 118px; /* Mirroring positioning */
+    top: 248px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.01em;
+    color: #271209;
+}
+
+.flav-header-line-1, .flav-header-line-2 {
+    position: absolute;
+    width: 765px;
+    height: 12px;
+    left: 0;
+}
+.flav-header-line-1 { top: 43px; }
+.flav-header-line-2 { top: 146px; }
+
+/* Image Card Frame 3 for Flavor */
+.frame-3-flavor {
+    position: absolute;
+    width: 313px;
+    height: 392px;
+    left: 246px; /* Calculated: 182 + 64 (flipped logic) */
+    top: 2236px; /* 2181 + 55 */
+    background: #FFFFFF;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    z-index: 6;
+    overflow: hidden;
+}
+
+.image-135 {
+    position: absolute;
+    width: 398px;
+    height: 392px;
+    left: -43px;
+    top: 0px;
+    background: url('fries.jpg');
+    background-size: cover;
+}
+
+/* --- CSS REMAINS THE SAME UNTIL THE HOVER STATES --- */
+/* (omitting unchanged sections for brevity) */
+
+/* --- INTERACTIVE ELEMENTS (IMAGES & TEXT) --- */
+/* Common styles for the main images */
+.main-image {
+    position: absolute;
+    background-image: url('Copilot_20251130_230504.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd; /* Placeholder color */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    z-index: 20;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+}
+
+/* Common styles for the Text Cards */
+.text-card {
+    position: absolute;
+    width: 367px;
+    height: 250px;
+    background: #FFFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    padding: 15px 25px;
+    z-index: 15;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+/* ... (other unchanged styles) ... */
+
+/* --- STATE: DEFAULT (No Hover) --- */
+/* Left Image (Mission Image) */
+.container[data-state="default"] .img-left {
+    width: 360px;
+    height: 415px;
+    left: 355px;
+    top: calc(50% - 415px/2 + 168px);
+}
+/* Right Image (Vision Image) */
+.container[data-state="default"] .img-right {
+    width: 360px;
+    height: 415px;
+    left: 735px;
+    top: calc(50% - 415px/2 + 168px);
+}
+
+
+/* --- STATE: HOVER MISSION (Left Image Hovered) --- */
+
+/* Left Image grows */
+.container[data-state="mission"] .img-left {
+    width: 439px;
+    height: 506.07px;
+    left: 424px;
+    top: calc(50% - 506.07px/2 + 172.53px);
+    z-index: 30;
+}
+
+/* Right Image shrinks and moves right */
+.container[data-state="mission"] .img-right {
+    width: 325px;
+    height: 374.65px;
+    left: 883px;
+    top: calc(50% - 374.65px/2 + 172.83px);
+    filter: brightness(0.9);
+}
+
+/* Mission Text Appears: 
+   *** ADJUSTED TOP VALUE HERE *** */
+.container[data-state="mission"] .card-mission {
+    opacity: 1;
+    transform: translateY(0);
+    left: 350px; /* Moved slightly right to center above expanded image */
+    top: 400px; /* Moved UP */
+    pointer-events: auto; /* Enable interaction */
+}
+
+
+/* --- STATE: HOVER VISION (Right Image Hovered) --- */
+
+/* Left Image shrinks and moves left */
+.container[data-state="vision"] .img-left {
+    width: 325px;
+    height: 374.65px;
+    left: 238px;
+    top: calc(50% - 374.65px/2 + 172.99px);
+    filter: brightness(0.9);
+}
+
+/* Right Image grows (Card 81) */
+.container[data-state="vision"] .img-right {
+    width: 445px;
+    height: 512.99px;
+    left: 583px;
+    top: calc(50% - 512.99px/2 + 172.99px);
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+}
+
+/* Vision Text Appears: 
+   *** ADJUSTED TOP VALUE HERE *** */
+.container[data-state="vision"] .card-vision {
+    opacity: 1;
+    transform: translateY(0);
+    left: 720px; /* Moved slightly left to center above expanded image */
+    top: 390px; /* Moved UP */
+    border-radius: 20px;
+    pointer-events: auto; /* Enable interaction */
+}
+
+/* ... (the rest of the CSS remains the same) ... */
+
+/* --- CSS REMAINS THE SAME UNTIL THE HOVER STATES --- */
+
+/* Common styles for the Text Cards */
+.text-card {
+    position: absolute;
+    width: 367px;
+    height: 230px;
+    background: #FFFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    padding: 15px 25px;
+    z-index: 15; /* Base z-index */
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+/* ... (other unchanged styles) ... */
+
+/* --- STATE: HOVER MISSION (Left Image Hovered) --- */
+
+/* Left Image grows */
+.container[data-state="mission"] .img-left {
+    width: 439px;
+    height: 580.07px;
+    left: 424px;
+    top: calc(50% - 506.07px/2 + 172.53px);
+    z-index: 30; /* Image has high z-index */
+}
+
+/* ... (Right Image shrinks and moves right) ... */
+
+/* Mission Text Appears: 
+   *** CRITICAL Z-INDEX CHANGE HERE *** */
+.container[data-state="mission"] .card-mission {
+    opacity: 1;
+    transform: translateY(0);
+    left: 350px;
+    top: 400px; 
+    z-index: 40; /* MUST be higher than the image's z-index (30) */
+    pointer-events: auto;
+}
+
+
+/* --- STATE: HOVER VISION (Right Image Hovered) --- */
+
+/* ... (Left Image shrinks and moves left) ... */
+
+/* Right Image grows (Card 81) */
+.container[data-state="vision"] .img-right {
+    width: 445px;
+    height: 540.99px;
+    left: 583px;
+    top: calc(50% - 512.99px/2 + 172.99px);
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.25);
+    z-index: 30; /* Image has high z-index */
+}
+
+/* Vision Text Appears: 
+   *** CRITICAL Z-INDEX CHANGE HERE *** */
+.container[data-state="vision"] .card-vision {
+    opacity: 1;
+    transform: translateY(0);
+    left: 720px;
+    top: 390px;
+    border-radius: 20px;
+    z-index: 40; /* MUST be higher than the image's z-index (30) */
+    pointer-events: auto;
+}
+
+/* --- RESET & BASIC SETUP --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/* --- MAIN CONTAINER --- */
+.container {
+    position: relative;
+    width: 1440px;
+    height: 1043px;
+    background: #FBF1CB;
+    overflow: hidden;
+    /* CRITICAL: Increased margin to ensure clear separation */
+    margin-top: 0px; 
+    
+}
+
+/* --- FONTS --- */
+.tsukimi {
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-weight: 700;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* --- BACKGROUND DECORATION --- */
+.decor-item {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* Placeholder color if image missing */
+    background-color: rgba(0,0,0,0.05); 
+    border-radius: 50%;
+    pointer-events: none;
+    transition: all 0.5s ease;
+}
+
+/* Examples of specific items from your list (subset) */
+.item-1 { width: 150px; height: 150px; left: 31px; top: -15px; background-image: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.item-2 { width: 130px; height: 130px; left: 214px; top: 78px; background-image: url('fruit (1).png'); transform: rotate(-34.63deg); }
+.item-3 { width: 135px; height: 135px; left: 580px; top: 94px; background-image: url('beef (1).png'); transform: rotate(12.99deg); }
+.item-4 { width: 150px; height: 150px; left: 970px; top: -6px; background-image: url('bubble-tea (6).png'); transform: rotate(32.63deg); }
+.item-5 { width: 135px; height: 135px; left: 1334px; top: -15px; background-image: url('fast-food (1).png'); transform: rotate(-16.21deg); }
+
+
+/* --- STATIC CENTER ELEMENTS --- */
+
+/* The Header Section */
+.header-group {
+    position: absolute;
+    width: 517px;
+    height: 200px;
+    left: 462px;
+    top: 200px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.header-title {
+    font-size: 50px;
+    line-height: 72px;
+    color: #271209;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-line {
+    position: absolute;
+    width: 513px;
+    height: 0px;
+    border: 5px solid #271209;
+}
+.line-top { left: 0; top: 51px; }
+.line-bottom { left: 0; top: 154px; }
+
+.header-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #271209;
+    border-radius: 50%;
+    left: 252px;
+}
+.dot-top { top: 43px; }
+.dot-bottom { top: 146px; }
+
+/* The Orange Gradient Background */
+.gradient-bg {
+    position: absolute;
+    width: 1536px;
+    height: 587px;
+    left: calc(50% - 1536px/2 + 5px);
+    top: calc(50% - 587px/2 + 172px);
+    background: linear-gradient(180deg, #F1A901 0%, #C55E05 100%);
+    z-index: 1;
+}
+
+/* --- INTERACTIVE ELEMENTS (IMAGES & TEXT) --- */
+
+/* Common styles for the main images */
+.main-image {
+    position: absolute;
+    background-image: url('burg_mis_vis.png');
+    background-size: cover;
+    background-position: center;
+    background-color: #ddd; /* Placeholder color */
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    z-index: 20;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+}
+
+/* Common styles for the Text Cards */
+.text-card {
+    position: absolute;
+    width: 367px;
+    height: 209px;
+    background: #FFFAF5;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    padding: 15px 25px;
+    z-index: 15;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.card-title {
+    font-size: 32px;
+    line-height: 46px;
+    color: #462211;
+    margin-bottom: 5px;
+}
+
+.card-desc {
+    font-size: 15px;
+    line-height: 22px;
+    color: #462211;
+    text-align: justify;
+}
+
+/* --- STATE: DEFAULT (No Hover) --- */
+/* Left Image (Mission Image) */
+.container[data-state="default"] .img-left {
+    width: 360px;
+    height: 415px;
+    left: 355px;
+    top: calc(50% - 415px/2 + 168px);
+}
+/* Right Image (Vision Image) */
+.container[data-state="default"] .img-right {
+    width: 360px;
+    height: 415px;
+    left: 735px;
+    top: calc(50% - 415px/2 + 168px);
+}
+
+
+/* --- STATE: HOVER MISSION (Left Image Hovered) --- */
+
+/* Left Image grows */
+.container[data-state="mission"] .img-left {
+    width: 439px;
+    height: 506.07px;
+    left: 424px;
+    top: calc(50% - 506.07px/2 + 172.53px);
+    z-index: 30;
+}
+
+/* Right Image shrinks and moves right */
+.container[data-state="mission"] .img-right {
+    width: 325px;
+    height: 374.65px;
+    left: 883px;
+    top: calc(50% - 374.65px/2 + 172.83px);
+    filter: brightness(0.9);
+}
+
+/* Mission Text Appears (Card 74) */
+.container[data-state="mission"] .card-mission {
+    opacity: 1;
+    transform: translateY(0);
+    left: 233px;
+    top: 588.54px;
+}
+
+
+/* --- STATE: HOVER VISION (Right Image Hovered) --- */
+
+/* Left Image shrinks and moves left */
+.container[data-state="vision"] .img-left {
+    width: 325px;
+    height: 374.65px;
+    left: 238px;
+    top: calc(50% - 374.65px/2 + 172.99px);
+    filter: brightness(0.9);
+}
+
+/* Right Image grows (Card 81) */
+.container[data-state="vision"] .img-right {
+    width: 445px;
+    height: 512.99px;
+    left: 583px;
+    top: calc(50% - 512.99px/2 + 172.99px);
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+}
+
+/* Vision Text Appears */
+.container[data-state="vision"] .card-vision {
+    opacity: 1;
+    transform: translateY(0);
+    left: 840px;
+    top: 591.99px;
+    border-radius: 20px;
+}
+
+/* --- Frame 20 Container (The main section) --- */
+.frame-20 {
+    position: relative;
+    width: 1440px;
+    height: 652px;
+    margin: 0 auto;
+    margin-top: 100px;
+    left: 60%;
+    transform: translateX(-50%);
+    top: auto; /* Adjusted from bottom: 976px to top: 50px for a visible demo */
+    overflow: hidden; /* Contains the map overflow */
+}
+
+/* --- Maps Background --- */
+.maps {
+    position: relative;
+    width: 1877px;
+    height: 673px;
+    left: 0%;
+    top: 0px;
+    background: url('maps.png') center / cover; /* Use your map image path */
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Gradient Overlays --- */
+.rectangle-4380-bottom-fade,
+.rectangle-4381-top-fade {
+    position: absolute;
+    width: 1440px;
+    height: 280px;
+    left: -26px;
+    opacity: 0.15;
+    filter: blur(2px);
+    pointer-events: none; /* Prevents blocking clicks if interactive map is used */
+}
+
+.rectangle-4380-bottom-fade {
+    top: 393px;
+    background: linear-gradient(180deg, #FAF5F6 0%, #F1A901 100%);
+}
+
+.rectangle-4381-top-fade {
+    top: 0px;
+    /* Reverse the vertical gradient and then flip the element back */
+    background: linear-gradient(0deg, #FAF5F6 0%, #F1A901 100%);
+}
+
+/* --- Frame 14 (Contact Box) --- */
+.frame-14 {
+    position: absolute;
+    width: 438px;
+    height: 454px;
+    left: 96px;
+    top: 113px;
+    background: #F1A901;
+    opacity: 0.8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding/border in the element's total width/height */
+    color: #271209; /* Set a default text color */
+}
+
+/* --- Text Styles (Headings & Content) --- */
+.frame-14 h2 {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 38px;
+    margin: 0;
+    text-align: center;
+}
+
+.store-hours {
+    left: 43px;
+    top: 46px;
+    width: 151px;
+    height: 38px;
+}
+
+.contact {
+    left: 43px;
+    top: 156px;
+    width: 106px;
+    height: 38px;
+}
+
+.address {
+    left: 42px;
+    top: 266px;
+    width: 108px;
+    height: 38px;
+}
+
+/* --- Store Hours Details --- */
+.group-98 .schedule {
+    position: absolute;
+    left: 43px;
+    top: 93px;
+    display: flex;
+    justify-content: space-between;
+    width: 352px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+.group-98 .day-range {
+    width: 146px; /* Explicit width from design */
+}
+.group-98 .time-range {
+    width: 145px; /* Explicit width from design */
+    text-align: right; /* Align time to the right */
+}
+
+
+/* --- Contact Details --- */
+.group-99 .phone-details {
+    position: absolute;
+    left: 43px;
+    top: 203px;
+    display: flex;
+    justify-content: space-between;
+    width: 353px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+}
+.group-99 .number {
+    width: 165px;
+    text-align: right;
+}
+
+/* --- Address Details --- */
+.group-100 .full-address {
+    position: absolute;
+    width: 353px;
+    height: 29px;
+    left: 43px;
+    top: 313px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Separator Lines --- */
+.line-13, .line-14 {
+    position: absolute;
+    height: 0;
+    left: 43px;
+    border: 1px solid rgba(39, 18, 9, 0.8);
+    margin: 0;
+}
+
+.line-13 {
+    width: 353px;
+    top: 141px;
+}
+
+.line-14 {
+    width: 352px;
+    top: 255px;
+}
+
+/* --- View Location Button --- */
+.rectangle-4280 {
+    /* These positions are relative to Frame 20, not Frame 14, as per the original CSS */
+    position: absolute;
+    width: 168px;
+    height: 41px;
+    left: 231px;
+    top: 489px; /* Outside Frame 14, positioned absolutely */
+    
+    background: linear-gradient(180deg, #462211 0%, #C55E05 100%);
+    border-radius: 50px;
+    display: flex; /* Use flex to easily center text */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Remove underline from anchor tag */
+}
+
+.view-location {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+/* --- Location Pin Image --- */
+.location-1 {
+    position: absolute;
+    width: 245px;
+    height: 245px;
+    left: 876px;
+    top: 141px;
+    background: url('location.png') center / cover; /* Use your location marker image path */
+    z-index: 90;
+}
