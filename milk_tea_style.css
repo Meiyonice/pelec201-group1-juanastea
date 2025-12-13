@@ -121,8 +121,6 @@ body {
   overflow-y: auto;
   overflow-x: visible;
   padding-right: 24px; /* scrollbar compensation */
-
-  padding-right: 10px;
   padding-left: 60px;
   padding-top: 10px;
 }
@@ -293,17 +291,16 @@ body {
 
 .price-wrapper {
   margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 60px;
   position: absolute;
   left: 50%;
-  top: 630px;                /* adjust if needed */
+  top: 630px;
   transform: translateX(-50%);
   display: flex;
-  gap: 150px;                 /* 🔥 THIS controls spacing */
+  justify-content: center;
+  gap: 150px;
   z-index: 2;
 }
+
 
 /* BACK ARROW */
 .back-arrow {
