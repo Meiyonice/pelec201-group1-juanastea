@@ -57,7 +57,8 @@ body {
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 50px; /* logo ↔ nav links spacing */
+    gap: 50px;
+    /* logo ↔ nav links spacing */
 }
 
 .logo {
@@ -73,7 +74,8 @@ body {
     list-style: none;
     display: flex;
     justify-content: flex-start;
-    gap: 60px; /* nav link ↔ nav link spacing */
+    gap: 60px;
+    /* nav link ↔ nav link spacing */
     margin: 0;
     padding: 0;
 }
@@ -84,7 +86,8 @@ body {
     color: #462211;
     border-radius: 15px;
 
-    font-size: 17px; /* smaller text */
+    font-size: 17px;
+    /* smaller text */
     font-weight: 500;
     text-decoration: none;
 
@@ -109,14 +112,16 @@ body {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 60px; /* icons ↔ contact spacing */
+    gap: 60px;
+    /* icons ↔ contact spacing */
 }
 
 /* ICONS */
 
 .icons {
     display: flex;
-    gap: 50px; /* icon ↔ icon spacing */
+    gap: 50px;
+    /* icon ↔ icon spacing */
 }
 
 .icon {
@@ -150,7 +155,8 @@ body {
 /* CONTACT BUTTON */
 
 .contact-btn {
-    padding: 12px 42px; /* slimmer */
+    padding: 12px 42px;
+    /* slimmer */
     background: linear-gradient(to right, #C55E05, #462211);
     border-radius: 50px;
     border: none;
@@ -248,7 +254,7 @@ body {
 
 
 /* -----------------------------------
-   HERO PRODUCTS (3D LAYER)
+   HERO PRODUCTS (3D LAYER)
 ----------------------------------- */
 
 .product-layer {
@@ -257,6 +263,7 @@ body {
     pointer-events: none;
     transform-style: preserve-3d;
     z-index: 4;
+    transform: scale(0.85) translateY(0px) translateX(50px);
 }
 
 .product {
@@ -612,7 +619,7 @@ body {
     position: relative;
     width: 100%;
     /* Keep the fixed height to prevent background cutout */
-    height: 620px; 
+    height: 620px;
 }
 
 /* Background */
@@ -636,7 +643,7 @@ body {
     display: grid;
     /* Use a 3-column grid: [auto for left] [1fr for gap] [auto for right] */
     grid-template-columns: auto 1fr auto;
-    
+
     /* Rows for top content and bottom section */
     grid-template-rows: auto 1fr;
     align-content: start;
@@ -646,7 +653,7 @@ body {
 
 .footer-left {
     width: 420px;
-    grid-column: 1; 
+    grid-column: 1;
 }
 
 .footer-logo {
@@ -667,20 +674,20 @@ body {
 /* Right */
 
 .footer-right {
-    grid-column: 3; 
-    
+    grid-column: 3;
+
     display: flex;
-    width: 100%; 
-    justify-content: flex-end; 
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .footer-columns {
     display: flex;
     gap: 90px;
     margin-top: 185px;
-    width: 100%; 
+    width: 100%;
     /* FIX 1: Align content items to the top (flex-start) */
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .footer-col {
@@ -695,7 +702,7 @@ body {
     font-weight: 700;
     color: #462211;
     /* Reduced margin is handled below for the location column only */
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 /* Links */
@@ -761,21 +768,22 @@ body {
 
 /* FIX 2: Target the location column title to reduce spacing below it */
 .footer-location-col .footer-title {
-    margin-bottom: 10px; /* Reduced space above the location text */
+    margin-bottom: 10px;
+    /* Reduced space above the location text */
 }
 
 /* Bottom */
 
 .footer-bottom {
     /* Span across all three grid columns to cover the full padded width */
-    grid-column: 1 / -1; 
-    
-    margin-top: 50px; 
+    grid-column: 1 / -1;
+
+    margin-top: 50px;
     text-align: center;
 }
 
 .footer-line {
-    width: 90%; 
+    width: 90%;
     margin: 0 auto 35px;
     border-top: 1px solid #462211;
 }
