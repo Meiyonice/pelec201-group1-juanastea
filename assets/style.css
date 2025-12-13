@@ -576,101 +576,107 @@ body {
    FOOTER
 ----------------------------------- */
 
-#footer {
-    background: linear-gradient(to bottom,
-            rgba(241, 169, 1, 0),
-            #F1A901 25%,
-            #512713 100%);
-    color: white;
-    padding: 80px 20px 40px;
-    font-family: 'Poppins', sans-serif;
-    margin-top: 160px;
+.footer {
+    position: absolute;
+    width: 1440px;
+    height: 610px;
+    left: 0;
+    top: 4652px;
 }
 
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1100px;
-    margin: auto;
+.footer-bg {
+    position: absolute;
+    inset: 0;
+    background: #FDBF18;
+    box-shadow: inset 0 2px 50px rgba(197, 94, 5, 0.74);
 }
 
-.footer-about,
-.footer-links,
-.footer-contact {
-    flex: 1;
-    min-width: 240px;
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
+/* Logo */
 .footer-logo {
-    width: 90px;
-    /* bigger logo */
-    height: 90px;
-    border-radius: 0;
-    /* removes circle */
-    object-fit: contain;
-    background: none;
-    /* removes white background */
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 100px;
+    top: -10px;
+    background: url("images/ui/juana-logo.png") center / contain no-repeat;
 }
 
+/* Description */
+.footer-text {
+    position: absolute;
+    width: 401px;
+    left: 112px;
+    top: 299px;
+    font-size: 20px;
+    line-height: 30px;
+    color: #462211;
+    text-align: justify;
+}
+
+/* Titles */
 .footer-title {
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    position: absolute;
+    font-size: 25px;
+    font-weight: 800;
+    color: #462211;
 }
 
-.footer h2,
-.footer h3 {
-    margin-bottom: 12px;
-}
+.footer-pages-title { left: 622px; top: 193px; }
+.footer-contact-title { left: 831px; top: 193px; }
+.footer-location-title { left: 1121px; top: 193px; }
 
-.footer p,
-.footer a {
-    font-size: 15px;
-    color: white;
+/* Links */
+.footer-link {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 600;
+    color: #462211;
     text-decoration: none;
-    display: block;
-    margin-bottom: 8px;
-    line-height: 1.6;
 }
 
-.footer a:hover {
-    text-decoration: underline;
+.footer-home { left: 623px; top: 247px; }
+.footer-products { left: 623px; top: 299px; }
+.footer-about { left: 623px; top: 353px; }
+
+/* Contact */
+.footer-contact {
+    position: absolute;
+    left: 831px;
+    font-size: 16px;
+    color: #462211;
 }
 
-.footer-bottom {
+.footer-contact.phone { top: 247px; }
+.footer-contact.email { top: 299px; }
+
+/* Location */
+.footer-location {
+    position: absolute;
+    width: 217px;
+    left: 1121px;
+    top: 248px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #462211;
+}
+
+/* Bottom */
+.footer-line {
+    position: absolute;
+    width: 1091px;
+    left: 50%;
+    top: 517px;
+    transform: translateX(-50%);
+    border-top: 1px solid #462211;
+}
+
+.footer-copy {
+    position: absolute;
+    top: 560px;
+    width: 100%;
     text-align: center;
-    margin-top: 50px;
-    font-size: 14px;
-    opacity: 0.85;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .footer-brand {
-        justify-content: center;
-    }
-
-    .footer-about,
-    .footer-links,
-    .footer-contact {
-        max-width: 500px;
-    }
+    font-size: 16px;
+    color: #462211;
 }
 
 /* -----------------------------------
