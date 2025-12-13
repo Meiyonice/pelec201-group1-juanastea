@@ -13,40 +13,59 @@
 
 body {
   margin: 0;
-  background-color: var(--bg-color);
+  min-height: 100vh;
+
+  background-color: #FBF1CB;
+  background-image: url("product-series-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   font-family: "Poppins", system-ui, sans-serif;
+
   display: flex;
   justify-content: center;
+  align-items: center;   /* 🔑 THIS WAS MISSING */
+  overflow-x: hidden;
+
 }
+
+
+
 
 .canvas {
   width: 1440px;
   height: 1024px;
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
 
-  /* background pattern */
-  background-color: #FBF1CB;
-  background-repeat: repeat;
-  background-size: 135px 135px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
 }
+
+
+
 
 
 /* HEADER TEXT – MILK TEA SERIES */
 .page-title {
   position: absolute;
-  top: 120px;
-  left: 690px;
-  width: 808px;
-  height: 200px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
   font-family: "Tsukimi Rounded", system-ui, sans-serif;
   font-weight: 700;
   font-size: 70px;
-  line-height: 1;
   color: #242709;
+  text-align: center;
+  white-space: nowrap;
+
   z-index: 2;
 }
+
 
 
 
@@ -59,15 +78,18 @@ body {
 }
 
 
-/* MAIN LAYOUT: image + cards */
 .main {
   position: absolute;
   top: 120px;
-  left: 80px;
-  right: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1280px; /* matches your layout width */
   display: flex;
-  gap: 10px;
+  gap: 40px;
 }
+
+
 
 /* LEFT: MAIN MILK TEA IMAGE */
 .main-image-wrapper {
@@ -87,17 +109,18 @@ body {
 
 /* RIGHT: PRODUCT CARDS COLUMN */
 .product-panel {
+  position: relative; /* IMPORTANT */
   flex: 1;
-  padding-top: 100px;   /* 120 - 20 */
+  padding-top: 100px;
 }
+
 
 /* Product list: first 3 cards visible, rest scrollable */
 .product-list {
   max-height: 550px;    
   overflow-y: auto;
   overflow-x: visible;
-
-  padding-right: 10px;
+  padding-right: 24px; /* scrollbar compensation */
   padding-left: 60px;
   padding-top: 10px;
 }
@@ -205,22 +228,13 @@ body {
 
 
 .price-option {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 
-.price-medium {
-  left: 812px;  
-  top: 824px;    
-}
 
-.price-large {
-  left: 1083px;  
-  top: 824px;   
-}
 
 /* Circle (ellipse) */
 .price-circle {
@@ -275,115 +289,31 @@ body {
   text-align: center;
 }
 
-
-
-.bg-icons {
+.price-wrapper {
+  margin-top: 40px;
   position: absolute;
-  inset: 0;
-  pointer-events: none;   
-  z-index: 0;
+  left: 50%;
+  top: 630px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  z-index: 2;
 }
 
 
-.bg-icon {
+/* BACK ARROW */
+.back-arrow {
   position: absolute;
-  width: 120px;         
-  opacity: 0.35;
+  top: 24px;
+  left: 24px;
+  z-index: 5; /* above bg + content */
+  cursor: pointer;
 }
 
-.page-title,
-.main,
-.price-option {
-  z-index: 1;   
+.back-arrow img {
+  width: 60px;   /* adjust if needed */
+  height: auto;
+  display: block;
 }
 
-.icon-bt-1 { top: 40px; left: 80px; transform: rotate(-25deg); }
-
-/* ========== BUBBLE TEA (OUTLINE) ========== */
-.icon-bt-1 {
-  top: 40px;
-  left: 25px;
-  transform: rotate(-24deg);
-}
-
-.icon-bt-2 {
-  top: 430px;
-  left: 630px;
-  transform: rotate(-22deg);
-}
-
-.icon-bt-3 {
-  top: 370px;
-  left: 1070px;
-  transform: rotate(-25deg);
-}
-
-/* ========== BURGER (OUTLINE) ========== */
-.icon-burger-1 {
-  top: 5px;
-  left: 610px;
-  transform: rotate(5deg);
-}
-
-.icon-burger-2 {
-  top: 225px;
-  left: 650px;
-  transform: rotate(3deg);
-}
-
-.icon-burger-3 {
-  top: 875px;
-  left: 320px;
-  transform: rotate(4deg);
-}
-
-/* ========== FRIES (OUTLINE) ========== */
-.icon-fries-1 {
-  top: 55px;
-  left: 330px;
-  transform: rotate(-15deg);
-}
-
-.icon-fries-2 {
-  top: 780px;
-  left: 20px;
-  transform: rotate(-18deg);
-}
-
-.icon-fries-3 {
-  top: 510px;
-  left: 870px;
-  transform: rotate(-16deg);
-}
-
-/* ========== FRUIT TEA (OUTLINE) ========== */
-.icon-fruit-1 {
-  top: 70px;
-  left: 930px;
-  transform: rotate(18deg);
-}
-
-.icon-fruit-2 {
-  top: 315px;
-  left: 1280px;
-  transform: rotate(20deg);
-}
-
-/* ========== GRAHAM CRACKER (OUTLINE) ========== */
-.icon-graham-1 {
-  top: 50px;
-  left: 1230px;
-  transform: rotate(-18deg);
-}
-
-.icon-graham-2 {
-  top: 745px;
-  left: 640px;
-  transform: rotate(-22deg);
-}
-
-.icon-graham-3 {
-  top: 695px;
-  left: 1120px;
-  transform: rotate(-20deg);
-}
