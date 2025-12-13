@@ -426,8 +426,10 @@ body {
 .product-img {
     width: var(--img-width, 35%);
     z-index: 2;
+    /* Added transition, adjusted transform */
     transition: transform .35s cubic-bezier(.22, .61, .36, 1);
     transform-origin: bottom center;
+    transform: scale(var(--img-scale, 1));
 }
 
 /* Shadow */
@@ -435,6 +437,7 @@ body {
     position: absolute;
     bottom: var(--shadow-y, 50px);
     left: 50%;
+    /* Added transition, adjusted transform to use initial scale */
     transform: translateX(-50%) scale(var(--img-scale, 1));
     width: var(--shadow-w, 100px);
     height: var(--shadow-h, 22px);
@@ -442,6 +445,7 @@ body {
     filter: blur(1px);
     border-radius: 50%;
     z-index: 1;
+    transition: transform .35s cubic-bezier(.22, .61, .36, 1);
 }
 
 /* Name */
@@ -464,13 +468,14 @@ body {
 }
 
 .product-card:hover .product-img {
+    /* Product lifts up (translateY) and scales up (hover-scale) */
     transform: translateY(6px) scale(var(--hover-scale, 1.3));
 }
 
 .product-card:hover .shadow {
+    /* Shadow scales up (hover-scale) */
     transform: translateX(-50%) scale(var(--hover-scale, 1.3));
 }
-
 
 /* -----------------------------------
    ABOUT US SECTION
