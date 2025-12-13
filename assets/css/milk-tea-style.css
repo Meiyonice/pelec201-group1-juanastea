@@ -1,0 +1,617 @@
+/* =======================================================
+    FULL CSS FOR MILK TEA SERIES PAGE (milk-tea-style.css)
+========================================================== */
+
+:root {
+    --bg-color: #fbf1cb;
+    --header-color: #242709;
+    --card-bg: #fff7f0;
+    --text-dark: #271209;
+    
+    /* ADDED REQUIRED VARIABLE for Navbar/Footer alignment */
+    --page-padding: 120px; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color); 
+    background-image: url("../images/backgrounds/product-series-bg.png"); 
+    background-size: 100% auto;
+    background-position: center 60px;
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+    /* Removed the display: flex properties to allow normal content flow */
+    
+    /* Added padding-top to compensate for the fixed navbar, as you requested */
+    padding-top: 100px;
+}
+
+/* CANVAS ADJUSTMENTS to accommodate the fixed navbar */
+.canvas {
+    width: 1440px;
+    
+    /* --- CRITICAL FIX 1: Change to relative position and remove unnecessary top/margin on content --- */
+    /* By making this relative and giving it height, it pushes the footer down */
+    position: relative;
+    /* Removed: top: 20px; */
+    /* Removed: margin-top: 100px; */
+    
+    /* --- CRITICAL FIX 2: Increased minimum height to ensure the footer starts AFTER all milk tea content --- */
+    min-height: 1050px; 
+    
+    overflow: hidden;
+    background-color: transparent; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ==================================================
+    NAVBAR (Unchanged)
+================================================== */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+
+    background: linear-gradient(180deg, #F1A901 0%, #FBF1CB 100%);
+    transition: transform 0.35s ease, opacity 0.3s ease;
+}
+
+#navbar.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+/* NAVBAR LAYOUT */
+
+.nav-inner {
+    height: 100%;
+    padding: 0 var(--page-padding);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    position: relative;
+    top: -25px;
+}
+
+/* LEFT */
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    /* logo ↔ nav links spacing */
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+    object-fit: contain;
+    margin-left: -20px;
+}
+
+/* CENTER */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 60px;
+    /* nav link ↔ nav link spacing */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-btn {
+    padding: 8px 18px;
+    background: transparent;
+    color: #462211;
+    border-radius: 15px;
+
+    font-size: 17px;
+    /* smaller text */
+    font-weight: 500;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.25s;
+}
+
+.nav-btn:hover {
+    background: rgba(70, 34, 17, 0.15);
+}
+
+.nav-btn.active {
+    background: #462211;
+    color: #FBF8D8;
+}
+
+/* RIGHT */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    /* icons ↔ contact spacing */
+}
+
+/* ICONS */
+
+.icons {
+    display: flex;
+    gap: 50px;
+    /* icon ↔ icon spacing */
+}
+
+.icon {
+    width: 44px;
+    height: 44px;
+
+    background: none;
+    border-radius: 50%;
+    border: 3px solid #462211;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.25s;
+    color: #462211;
+}
+
+.icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.icon:hover {
+    background: #462211;
+    border-color: #FBF8D8;
+    color: #FBF8D8;
+}
+
+/* CONTACT BUTTON */
+
+.contact-btn {
+    padding: 12px 42px;
+    /* slimmer */
+    background: linear-gradient(to right, #C55E05, #462211);
+    border-radius: 50px;
+    border: none;
+
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* =======================================================
+    MILK TEA CONTENT STYLES
+========================================================== */
+
+/* HEADER TEXT – MILK TEA SERIES */
+.page-title {
+    /* Adjusted top: 20px to top: 0px to align with the new relative canvas top */
+    position: absolute;
+    top: 0px; 
+    left: 690px;
+    width: 678px;
+    height: 200px;
+    font-family: "Tsukimi Rounded", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 1;
+    color: #242709;
+    z-index: 2;
+}
+
+/* MAIN LAYOUT: image + cards */
+.main {
+    /* Adjusted top: 20px to top: 0px to align with the new relative canvas top */
+    position: absolute;
+    top: 0px; 
+    left: 80px;
+    right: 80px;
+    display: flex;
+    gap: 10px;
+}
+
+/* LEFT: MAIN MILK TEA IMAGE */
+.main-image-wrapper {
+    width: 542px;
+    height: 784px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.main-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* RIGHT: PRODUCT CARDS COLUMN */
+.product-panel {
+    flex: 1;
+    padding-top: 100px; 
+}
+
+/* Product list: first 3 cards visible, rest scrollable */
+.product-list {
+    max-height: 550px; 
+    overflow-y: auto;
+    overflow-x: visible;
+
+    padding-right: 10px;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+
+/* Scrollbar styling */
+.product-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.product-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.product-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+    width: 687px;
+    height: 160px;
+    background-color: var(--card-bg);
+    border-radius: 50px;
+    margin-bottom: 24px;
+    padding: 18px 28px;
+    display: flex;
+    gap: 24px;
+
+    /* Figma Drop Shadow */
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+/* PRODUCT IMAGE */
+.product-image {
+    width: 180px; 
+    height: 220px; 
+    overflow: hidden;
+    align-self: center;
+    padding: 0px; 
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* PRODUCT TEXT */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-family: "Tsukimi Rounded", system-ui, sans-serif;
+    font-weight: 700; 
+    font-size: 32px;
+    color: #271209;
+    margin-bottom: 4px;
+}
+
+.product-description {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #271209;
+    max-width: 500px;
+}
+
+/* RATING SECTION */
+.rating-row {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+    margin-right: 6px;
+}
+
+.star {
+    font-size: 16px;
+    color: #f9a825;
+}
+
+.rating-value {
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+/* =======================
+    PRICE CIRCLES SECTION
+================================ */
+
+
+.price-option {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.price-medium {
+    left: 812px; 
+    top: 824px; 
+}
+
+.price-large {
+    left: 1083px; 
+    top: 824px; 
+}
+
+/* Circle (ellipse) */
+.price-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #462211, #c55e05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+.price-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.price-value {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 600 ;
+    color: #FBF1CB;
+    line-height: 1;
+    text-align: center
+}
+
+
+.price-php {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FBF1CB;
+    margin-top: 4px;
+    line-height: 1;
+    text-align: center 
+}
+
+
+.price-label {
+    margin-top: 12px;
+    font-family: "Poppins", system-ui, sans-serif;
+    font-weight: 600; 
+    font-size: 20px;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* ==================================================
+    FOOTER (Unchanged, as this section was already correct but positioned incorrectly)
+================================================== */
+
+#footer {
+    position: relative;
+    width: 100%;
+    /* Keep the fixed height to prevent background cutout */
+    height: 620px;
+}
+
+/* Background */
+
+.footer-bg {
+    position: absolute;
+    inset: 0;
+    background: #FDBF18;
+    box-shadow: inset 0 2px 50px rgba(197, 94, 5, 0.74);
+}
+
+/* Layout (same logic as navbar) */
+
+.footer-inner {
+    position: relative;
+    height: 100%;
+
+    /* Consistent padding for left/right alignment with Navbar */
+    padding: 0 var(--page-padding);
+
+    display: grid;
+    /* Use a 3-column grid: [auto for left] [1fr for gap] [auto for right] */
+    grid-template-columns: auto 1fr auto;
+
+    /* Rows for top content and bottom section */
+    grid-template-rows: auto 1fr;
+    align-content: start;
+}
+
+/* Left */
+
+.footer-left {
+    width: 420px;
+    grid-column: 1;
+}
+
+.footer-logo {
+    width: 400px;
+    height: 400px;
+    background: url("../images/ui/juana-logo.png") center / contain no-repeat;
+}
+
+.footer-text {
+    margin-top: -100px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #462211;
+    text-align: justify;
+}
+
+/* Right */
+
+.footer-right {
+    grid-column: 3;
+
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 90px;
+    margin-top: 185px;
+    width: 100%;
+    /* FIX 1: Align content items to the top (flex-start) */
+    align-items: flex-start;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titles */
+
+.footer-title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #462211;
+    /* Reduced margin is handled below for the location column only */
+    margin-bottom: 30px;
+}
+
+/* Links */
+
+.footer-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #462211;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+/* Contact rows */
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #462211;
+    margin-bottom: 20px;
+}
+
+/* Contact icons */
+
+.contact-icon {
+    width: 35px;
+    height: 35px;
+    border: 3px solid #462211;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.phone-icon::before {
+    background-image: url("../images/ui/phone-icon.png");
+}
+
+.email-icon::before {
+    background-image: url("../images/ui/email-icon.png");
+}
+
+/* Location */
+
+.footer-location {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #462211;
+    max-width: 220px;
+}
+
+/* FIX 2: Target the location column title to reduce spacing below it */
+.footer-location-col .footer-title {
+    margin-bottom: 10px;
+    /* Reduced space above the location text */
+}
+
+/* Bottom */
+
+.footer-bottom {
+    /* Span across all three grid columns to cover the full padded width */
+    grid-column: 1 / -1;
+
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-line {
+    width: 90%;
+    margin: 0 auto 35px;
+    border-top: 1px solid #462211;
+}
+
+.footer-copy {
+    font-size: 16px;
+    font-weight: 400;
+    color: #462211;
+}

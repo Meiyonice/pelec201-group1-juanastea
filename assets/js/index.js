@@ -383,11 +383,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Smooth scroll function
-  function scrollToSection(section) {
+  function scrollToSection(section, extraOffset = 0) {
     if (!section) return;
 
     const navHeight = document.getElementById("navbar").offsetHeight;
-    const sectionTop = section.offsetTop - navHeight + 2;
+    const sectionTop = section.offsetTop - navHeight + extraOffset;
 
     window.scrollTo({
       top: sectionTop,
@@ -410,7 +410,8 @@ document.addEventListener("DOMContentLoaded", () => {
       clearActive();
       button.classList.add("active");
 
-      scrollToSection(sections[text]);
+      // Lower landing ONLY for PRODUCTS
+      scrollToSection(sections[text], text === "PRODUCTS" ? 340 : 0);
     });
   });
 
@@ -419,4 +420,41 @@ document.addEventListener("DOMContentLoaded", () => {
     clearActive();
     scrollToSection(sections["CONTACT"]);
   });
+});
+
+/* ===================================
+   FOOTER SCROLL CONNECTION
+=================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const footerLinks = document.querySelectorAll(".footer-link");
+
+  const sections = {
+    "HOME": document.getElementById("hero"),
+    "PRODUCTS": document.getElementById("products"),
+    "ABOUT US": document.getElementById("about-us"),
+    "CONTACT": document.querySelector("footer")
+  };
+
+  function scrollToSection(section, extraOffset = 0) {
+    if (!section) return;
+
+    const navHeight = document.getElementById("navbar").offsetHeight;
+    const sectionTop = section.offsetTop - navHeight + extraOffset;
+
+    window.scrollTo({
+      top: sectionTop,
+      behavior: "smooth"
+    });
+  }
+
+  footerLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = link.dataset.target;
+      scrollToSection(sections[target], target === "PRODUCTS" ? 120 : 0);
+    });
+  });
+
 });

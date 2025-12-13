@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <title>Milk Tea Series</title>
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Tsukimi+Rounded:wght@700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- CSS File -->
-  <link rel="stylesheet" href="milk_tea_style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Milk Tea Series | Juana's Tea</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/milk-tea-style.css" />
 </head>
+
 <body>
-  <div class="canvas">
+  <nav id="navbar">
+    <div class="nav-inner">
 
-    <div class="bg-icons">
-    <!-- Bubble tea -->
-    <img src="bubble-tea (outline).png" class="bg-icon icon-bt-1" alt="">
-    <img src="bubble-tea (outline).png" class="bg-icon icon-bt-2" alt="">
-    <img src="bubble-tea (outline).png" class="bg-icon icon-bt-3" alt="">
-
-    <!-- Burger -->
-    <img src="burger (outline).png" class="bg-icon icon-burger-1" alt="">
-    <img src="burger (outline).png" class="bg-icon icon-burger-2" alt="">
-    <img src="burger (outline).png" class="bg-icon icon-burger-3" alt="">
-
-    <!-- Fries -->
-    <img src="fries (outline).png" class="bg-icon icon-fries-1" alt="">
-    <img src="fries (outline).png" class="bg-icon icon-fries-2" alt="">
-    <img src="fries (outline).png" class="bg-icon icon-fries-3" alt="">
-
-    <!-- Fruit tea -->
-    <img src="fruit-tea (outline).png" class="bg-icon icon-fruit-1" alt="">
-    <img src="fruit-tea (outline).png" class="bg-icon icon-fruit-2" alt="">
-
-    <!-- Graham cracker -->
-    <img src="graham cracker (outline).png" class="bg-icon icon-graham-1" alt="">
-    <img src="graham cracker (outline).png" class="bg-icon icon-graham-2" alt="">
-    <img src="graham cracker (outline).png" class="bg-icon icon-graham-3" alt="">
-    </div>
-    
-    <!-- Header Title -->
-    <h1 class="page-title">MILK TEA SERIES</h1>
-
-    <!-- Main Content (image + cards) -->
-    <div class="main">
-      <!-- Left: Main Image -->
-      <div class="main-image-wrapper">
-        <img src="milktea.jpg" alt="Milk Tea Main" />
+      <div class="nav-left">
+        <img src="assets/images/ui/juana-logo.png" class="logo" alt="Logo" />
+        <ul class="nav-links">
+          <li><a href="#" class="nav-btn">Home</a></li>
+          <li><a href="#" class="nav-btn active">Products</a></li>
+          <li><a href="#" class="nav-btn">About Us</a></li>
+        </ul>
       </div>
 
-      <!-- Right: Product Cards -->
+      <div class="nav-right">
+        <div class="icons">
+
+          <button class="icon fb">
+            <svg width="20" height="20" viewBox="0 0 24 24">
+              <path d="M15 3H12C9.79 3 8 4.79 8 7V10H5V14H8V21H12V14H15L16 10H12V7C12 6.45 12.45 6 13 6H16V3H15Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+
+          <button class="icon messenger">
+            <svg width="22" height="22" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.05 2 11C2 14.09 3.64 16.83 6.23 18.52V22L9.74 20.07C10.47 20.23 11.23 20.32 12 20.32C17.52 20.32 22 16.27 22 11.32C22 6.38 17.52 2 12 2ZM12.97 14.29L10.26 11.41L4.88 14.29L10.92 8L13.74 10.88L19.02 8L12.97 14.29Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+
+          <button class="icon email">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+
+        </div>
+
+        <button class="contact-btn">Contact Us</button>
+      </div>
+
+
+    </div>
+  </nav>
+
+  <div class="canvas">
+
+    <h1 class="page-title">MILK TEA SERIES</h1>
+
+    <div class="main">
+      <div class="main-image-wrapper">
+        <img src="assets/images/products/milk-tea/milktea.jpg" alt="Milk Tea Main" />
+      </div>
+
       <div class="product-panel">
         <div class="product-list">
-          <!-- 1️⃣ Strawberry Milk Tea -->
+
           <div class="product-card">
             <div class="product-image">
-              <img src="Strawberry.png" alt="Strawberry Milk Tea" />
+              <img src="assets/images/products/milk-tea/Strawberry.png" alt="Strawberry Milk Tea" />
             </div>
             <div class="product-info">
               <div>
@@ -79,10 +92,9 @@
             </div>
           </div>
 
-          <!-- 2️⃣ Avocado Milk Tea -->
           <div class="product-card">
             <div class="product-image">
-              <img src="Avocado.png" alt="Avocado Milk Tea" />
+              <img src="assets/images/products/milk-tea/Avocado.png" alt="Avocado Milk Tea" />
             </div>
             <div class="product-info">
               <div>
@@ -103,10 +115,9 @@
             </div>
           </div>
 
-          <!-- 3️⃣ Taro Milk Tea -->
           <div class="product-card">
             <div class="product-image">
-              <img src="Taro.png" alt="Taro Milk Tea" />
+              <img src="assets/images/products/milk-tea/Taro.png" alt="Taro Milk Tea" />
             </div>
             <div class="product-info">
               <div>
@@ -127,10 +138,9 @@
             </div>
           </div>
 
-          <!-- 4️⃣ Chocolate Milk Tea -->
           <div class="product-card">
             <div class="product-image">
-              <img src="Chocolate.png" alt="Chocolate Milk Tea" />
+              <img src="assets/images/products/milk-tea/Chocolate.png" alt="Chocolate Milk Tea" />
             </div>
             <div class="product-info">
               <div>
@@ -151,10 +161,9 @@
             </div>
           </div>
 
-          <!-- 5️⃣ Okinawa Milk Tea -->
           <div class="product-card">
             <div class="product-image">
-              <img src="Okinawa.png" alt="Okinawa Milk Tea" />
+              <img src="assets/images/products/milk-tea/Okinawa.png" alt="Okinawa Milk Tea" />
             </div>
             <div class="product-info">
               <div>
@@ -175,10 +184,9 @@
             </div>
           </div>
 
-          <!-- 6️⃣ Red Velvet Milk Tea -->
           <div class="product-card">
             <div class="product-image">
-              <img src="Red Velvet.png" alt="Red Velvet Milk Tea" />
+              <img src="assets/images/products/milk-tea/Red Velvet.png" alt="Red Velvet Milk Tea" />
             </div>
             <div class="product-info">
               <div>
@@ -198,85 +206,17 @@
               </div>
             </div>
           </div>
-                    <!-- 7️⃣ Leche Flan Milk Tea -->
-            <div class="product-card">
-            <div class="product-image">
-                <img src="Leche Flan.png" alt="Leche Flan Milk Tea" />
-            </div>
-            <div class="product-info">
-                <div>
-                <h2 class="product-title">Leche Flan Milk Tea</h2>
-                <p class="product-description">
-                    A decadent blend of silky milk tea and rich leche flan flavor, offering a smooth, custard-like sweetness in every sip.
-                </p>
-                </div>
-                <div class="rating-row">
-                <div class="stars">
-                    <span class="star">★</span><span class="star">★</span>
-                    <span class="star">★</span><span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <span class="rating-value">5.0</span>
-                </div>
-            </div>
-            </div>
 
-            <!-- 8️⃣ Mango Milk Tea -->
-            <div class="product-card">
-            <div class="product-image">
-                <img src="Mango.png" alt="Mango Milk Tea" />
-            </div>
-            <div class="product-info">
-                <div>
-                <h2 class="product-title">Mango Milk Tea</h2>
-                <p class="product-description">
-                    A vibrant mix of creamy milk tea and juicy mango, creating a refreshing, tropical sweetness in every sip.
-                </p>
-                </div>
-                <div class="rating-row">
-                <div class="stars">
-                    <span class="star">★</span><span class="star">★</span>
-                    <span class="star">★</span><span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <span class="rating-value">5.0</span>
-                </div>
-            </div>
-            </div>
-
-            <!-- 9️⃣ Wintermelon Milk Tea -->
-            <div class="product-card">
-            <div class="product-image">
-                <img src="Wintermelon.png" alt="Wintermelon Milk Tea" />
-            </div>
-            <div class="product-info">
-                <div>
-                <h2 class="product-title">Wintermelon Milk Tea</h2>
-                <p class="product-description">
-                    A light and refreshing balance of creamy milk tea and mellow wintermelon sweetness, giving a clean, soothing taste in every sip.
-                </p>
-                </div>
-                <div class="rating-row">
-                <div class="stars">
-                    <span class="star">★</span><span class="star">★</span>
-                    <span class="star">★</span><span class="star">★</span>
-                    <span class="star">★</span>
-                </div>
-                <span class="rating-value">5.0</span>
-                </div>
-            </div>
-            </div>
-            
-          <!-- 🔟 Cookies & Cream Milk Tea -->
           <div class="product-card">
             <div class="product-image">
-              <img src="Cookies and Cream.png" alt="Cookies & Cream Milk Tea" />
+              <img src="assets/images/products/milk-tea/Leche Flan.png" alt="Leche Flan Milk Tea" />
             </div>
             <div class="product-info">
               <div>
-                <h2 class="product-title">Cookies & Cream Milk Tea</h2>
+                <h2 class="product-title">Leche Flan Milk Tea</h2>
                 <p class="product-description">
-                  A creamy fusion of milk tea and crushed cookies, delivering a smooth, sweet, and slightly crunchy cookies-and-cream flavor in every sip.
+                  A decadent blend of silky milk tea and rich leche flan flavor, offering a smooth, custard-like
+                  sweetness in every sip.
                 </p>
               </div>
               <div class="rating-row">
@@ -286,37 +226,169 @@
                   <span class="star">★</span>
                 </div>
                 <span class="rating-value">5.0</span>
-              </div> <!-- /rating-row -->
-            </div> <!-- /product-info -->
-          </div> <!-- /product-card -->
+              </div>
+            </div>
+          </div>
 
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/products/milk-tea/Mango.png" alt="Mango Milk Tea" />
+            </div>
+            <div class="product-info">
+              <div>
+                <h2 class="product-title">Mango Milk Tea</h2>
+                <p class="product-description">
+                  A vibrant mix of creamy milk tea and juicy mango, creating a refreshing, tropical sweetness in every
+                  sip.
+                </p>
+              </div>
+              <div class="rating-row">
+                <div class="stars">
+                  <span class="star">★</span><span class="star">★</span>
+                  <span class="star">★</span><span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+                <span class="rating-value">5.0</span>
+              </div>
+            </div>
+          </div>
 
-        </div><!-- /product-list -->
-      </div><!-- /product-panel -->
-    </div><!-- /main -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/products/milk-tea/Wintermelon.png" alt="Wintermelon Milk Tea" />
+            </div>
+            <div class="product-info">
+              <div>
+                <h2 class="product-title">Wintermelon Milk Tea</h2>
+                <p class="product-description">
+                  A light and refreshing balance of creamy milk tea and mellow wintermelon sweetness, giving a clean,
+                  soothing taste in every sip.
+                </p>
+              </div>
+              <div class="rating-row">
+                <div class="stars">
+                  <span class="star">★</span><span class="star">★</span>
+                  <span class="star">★</span><span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+                <span class="rating-value">5.0</span>
+              </div>
+            </div>
+          </div>
 
-    <!-- 💰 Price circles: 29 php (Medium) & 39 php (Large) -->
-    <div class="price-option price-medium">
-    <div class="price-circle">
-        <div class="price-number">
-        <span class="price-value">2 9</span>
-        <span class="price-php">p h p</span>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/products/milk-tea/Cookies and Cream.png" alt="Cookies & Cream Milk Tea" />
+            </div>
+            <div class="product-info">
+              <div>
+                <h2 class="product-title">Cookies & Cream Milk Tea</h2>
+                <p class="product-description">
+                  A creamy fusion of milk tea and crushed cookies, delivering a smooth, sweet, and slightly crunchy
+                  cookies-and-cream flavor in every sip.
+                </p>
+              </div>
+              <div class="rating-row">
+                <div class="stars">
+                  <span class="star">★</span><span class="star">★</span>
+                  <span class="star">★</span><span class="star">★</span>
+                  <span class="star">★</span>
+                </div>
+                <span class="rating-value">5.0</span>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </div>
-    <div class="price-label">Medium</div>
+    <div class="price-option price-medium">
+      <div class="price-circle">
+        <div class="price-number">
+          <span class="price-value">2 9</span>
+          <span class="price-php">p h p</span>
+        </div>
+      </div>
+      <div class="price-label">Medium</div>
     </div>
 
 
     <div class="price-option price-large">
-    <div class="price-circle">
+      <div class="price-circle">
         <div class="price-number">
-        <span class="price-value">3 9</span>
-        <span class="price-php">p h p</span>
+          <span class="price-value">3 9</span>
+          <span class="price-php">p h p</span>
         </div>
+      </div>
+      <div class="price-label">Large</div>
     </div>
-    <div class="price-label">Large</div>
+  </div>
+<!-- ================= FOOTER ================= -->
+<footer id="footer">
+  <div class="footer-bg"></div>
+
+  <div class="footer-inner">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <div class="footer-logo"></div>
+
+      <p class="footer-text">
+        Juana’s Tea is a family-grown brand serving milk teas, fruit teas, fries,
+        burgers, graham bars, and combo meals—offering quality, affordability,
+        and the warmth of Filipino hospitality from our home to yours.
+      </p>
     </div>
 
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <div class="footer-columns">
+
+        <!-- Pages -->
+        <div class="footer-col">
+          <h3 class="footer-title">All Pages</h3>
+          <a href="#" class="footer-link">Home</a>
+          <a href="#" class="footer-link">Products</a>
+          <a href="#" class="footer-link">About Us</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h3 class="footer-title">Contact Us</h3>
+
+          <div class="footer-contact">
+            <span class="contact-icon phone-icon"></span>
+            <span>(+63) 909-257-5876</span>
+          </div>
+
+          <div class="footer-contact">
+            <span class="contact-icon email-icon"></span>
+            <span>juana2023@gmail.com</span>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="footer-col footer-location-col">
+          <h3 class="footer-title">Location</h3>
+          <p class="footer-location">
+            Unzon Ibaba TMPI-1,<br>
+            Brgy. Gulang-Gulang,<br>
+            Lucena City, Quezon, 4301
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+      <div class="footer-line"></div>
+      <p class="footer-copy">© 2023–2025 Juana. All Rights Reserved.</p>
+    </div>
+
+  </div>
+</footer>
 
 </body>
+
 </html>

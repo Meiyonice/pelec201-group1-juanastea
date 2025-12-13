@@ -191,7 +191,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("images/backgrounds/hero-bg.png");
+    background-image: url("../images/backgrounds/hero-bg.png");
     background-size: 150% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -301,7 +301,7 @@ body {
 
 #products {
     width: 100%;
-    background-image: url("images/backgrounds/product-series-bg.png");
+    background-image: url("../images/backgrounds/product-series-bg.png");
     background-size: 100% auto;
     background-position: center 60px;
     background-repeat: no-repeat;
@@ -416,7 +416,7 @@ body {
 .card-bg {
     position: absolute;
     inset: 0;
-    background: url("images/backgrounds/shop-bg.png") bottom center / cover no-repeat;
+    background: url("../images/backgrounds/shop-bg.png") bottom center / cover no-repeat;
     transform: scale(1.15);
     transform-origin: bottom center;
     transition: all 0.2s ease;
@@ -486,11 +486,14 @@ body {
     background: #FBF1CB;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 60px;
     overflow: hidden;
-    padding: 0 120px;
+    padding: 0 var(--page-padding);
     width: 100%;
     font-family: 'Tsukimi Rounded', sans-serif;
+    margin-bottom: 180px;
 }
 
 .about-content {
@@ -498,6 +501,12 @@ body {
     text-align: center;
     max-width: 900px;
     z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; /* THIS controls logo ↔ paragraph spacing */
+
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s ease;
@@ -508,36 +517,12 @@ body {
     transform: translateY(0);
 }
 
-/* Logo + Circle */
-.circle-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: fit-content;
-    margin: 30px auto 50px;
-}
-
-.circle-bg {
-    width: 200px;
-    height: 200px;
-    background: #462211;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-main {
-    width: 275px;
-    height: 275px;
-    background: url("images/ui/logo.png") center/contain no-repeat;
-}
-
-.logo-text {
-    width: 320px;
-    height: 160px;
-    background: url("images/ui/logo-text.png") center/contain no-repeat;
+.about-logo {
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    background: url("../images/ui/juana-logo.png") center / contain no-repeat;
 }
 
 /* Story text */
@@ -664,7 +649,7 @@ body {
 .footer-logo {
     width: 400px;
     height: 400px;
-    background: url("images/ui/juana-logo.png") center / contain no-repeat;
+    background: url("../images/ui/juana-logo.png") center / contain no-repeat;
 }
 
 .footer-text {
@@ -754,11 +739,11 @@ body {
 }
 
 .phone-icon::before {
-    background-image: url("images/ui/phone-icon.png");
+    background-image: url("../images/ui/phone-icon.png");
 }
 
 .email-icon::before {
-    background-image: url("images/ui/email-icon.png");
+    background-image: url("../images/ui/email-icon.png");
 }
 
 /* Location */
