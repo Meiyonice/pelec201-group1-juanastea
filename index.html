@@ -20,46 +20,52 @@
 
   <!-- ================= NAVBAR ================= -->
   <nav id="navbar">
+    <div class="nav-inner">
 
-    <div class="left-section">
-      <img src="assets/images/ui/logo.png" class="logo" alt="Logo" />
+      <!-- Left -->
+      <div class="nav-left">
+        <img src="assets/images/ui/juana-logo.png" class="logo" alt="Logo" />
+        <ul class="nav-links">
+          <li><a href="#" class="nav-btn active">Home</a></li>
+          <li><a href="#" class="nav-btn">Products</a></li>
+          <li><a href="#" class="nav-btn">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Right -->
+      <div class="nav-right">
+        <div class="icons">
+
+          <button class="icon fb">
+            <svg width="20" height="20" viewBox="0 0 24 24">
+              <path d="M15 3H12C9.79 3 8 4.79 8 7V10H5V14H8V21H12V14H15L16 10H12V7C12 6.45 12.45 6 13 6H16V3H15Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+
+          <button class="icon messenger">
+            <svg width="22" height="22" viewBox="0 0 24 24">
+              <path
+                d="M12 2C6.48 2 2 6.05 2 11C2 14.09 3.64 16.83 6.23 18.52V22L9.74 20.07C10.47 20.23 11.23 20.32 12 20.32C17.52 20.32 22 16.27 22 11.32C22 6.38 17.52 2 12 2ZM12.97 14.29L10.26 11.41L4.88 14.29L10.92 8L13.74 10.88L19.02 8L12.97 14.29Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+
+          <button class="icon email">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+                fill="currentColor" />
+            </svg>
+          </button>
+
+        </div>
+
+        <button class="contact-btn">Contact Us</button>
+      </div>
+
+
     </div>
-
-    <ul class="nav-links">
-      <li><a href="#" class="nav-btn active">HOME</a></li>
-      <li><a href="#" class="nav-btn">PRODUCTS</a></li>
-      <li><a href="#" class="nav-btn">ABOUT US</a></li>
-    </ul>
-
-    <div class="icons">
-
-      <button class="icon fb">
-        <svg width="20" height="20" viewBox="0 0 24 24">
-          <path d="M15 3H12C9.79 3 8 4.79 8 7V10H5V14H8V21H12V14H15L16 10H12V7C12 6.45 12.45 6 13 6H16V3H15Z"
-            fill="currentColor" />
-        </svg>
-      </button>
-
-      <button class="icon messenger">
-        <svg width="22" height="22" viewBox="0 0 24 24">
-          <path
-            d="M12 2C6.48 2 2 6.05 2 11C2 14.09 3.64 16.83 6.23 18.52V22L9.74 20.07C10.47 20.23 11.23 20.32 12 20.32C17.52 20.32 22 16.27 22 11.32C22 6.38 17.52 2 12 2ZM12.97 14.29L10.26 11.41L4.88 14.29L10.92 8L13.74 10.88L19.02 8L12.97 14.29Z"
-            fill="currentColor" />
-        </svg>
-      </button>
-
-      <button class="icon email">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path
-            d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
-            fill="currentColor" />
-        </svg>
-      </button>
-
-    </div>
-
-    <button class="contact-btn">Contact Us</button>
-
   </nav>
 
   <!-- ================= HERO SECTION ================= -->
@@ -175,43 +181,66 @@
     </div>
   </section>
   <!-- ================= FOOTER ================= -->
-  <footer class="footer">
-    <!-- Footer Background -->
+  <footer id="footer">
     <div class="footer-bg"></div>
 
-    <!-- Logo -->
-    <div class="footer-logo"></div>
+    <div class="footer-inner">
 
-    <!-- Description -->
-    <p class="footer-text">
-      Juana’s Tea is a family-grown brand serving milk teas, fruit teas, fries,
-      burgers, graham bars, and combo meals—offering quality, affordability,
-      and the warmth of Filipino hospitality from our home to yours.
-    </p>
+      <!-- Left block -->
+      <div class="footer-left">
+        <div class="footer-logo"></div>
 
-    <!-- Navigation -->
-    <h3 class="footer-title footer-pages-title">All Pages</h3>
-    <a href="#" class="footer-link footer-home">Home</a>
-    <a href="#" class="footer-link footer-products">Products</a>
-    <a href="#" class="footer-link footer-about">About Us</a>
+        <p class="footer-text">
+          Juana’s Tea is a family-grown brand serving milk teas, fruit teas, fries,
+          burgers, graham bars, and combo meals—offering quality, affordability,
+          and the warmth of Filipino hospitality from our home to yours.
+        </p>
+      </div>
 
-    <!-- Contact -->
-    <h3 class="footer-title footer-contact-title">Contact Us</h3>
-    <p class="footer-contact phone">(+63) 909-257-5876</p>
-    <p class="footer-contact email">juana2023@gmail.com</p>
+      <!-- Right columns -->
+      <div class="footer-columns">
 
-    <!-- Location -->
-    <h3 class="footer-title footer-location-title">Location</h3>
-    <p class="footer-location">
-      Unzon Ibaba TMPI-1, Brgy. Gulang-Gulang,
-      Lucena City, Quezon, 4301
-    </p>
+        <!-- Pages -->
+        <div class="footer-col">
+          <h3 class="footer-title">All Pages</h3>
+          <a href="#" class="footer-link">Home</a>
+          <a href="#" class="footer-link">Products</a>
+          <a href="#" class="footer-link">About Us</a>
+        </div>
 
-    <!-- Bottom -->
-    <div class="footer-line"></div>
-    <p class="footer-copy">
-      © 2023–2025 Juana. All Rights Reserved.
-    </p>
+        <!-- Contact -->
+        <div class="footer-col">
+          <h3 class="footer-title">Contact Us</h3>
+
+          <div class="footer-contact">
+            <span class="contact-icon phone-icon"></span>
+            <span>(+63) 909-257-5876</span>
+          </div>
+
+          <div class="footer-contact">
+            <span class="contact-icon email-icon"></span>
+            <span>juana2023@gmail.com</span>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="footer-col footer-location-col">
+          <h3 class="footer-title">Location</h3>
+          <p class="footer-location">
+            Unzon Ibaba TMPI-1, Brgy. Gulang-Gulang,<br>
+            Lucena City, Quezon, 4301
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-line"></div>
+        <p class="footer-copy">© 2023–2025 Juana. All Rights Reserved.</p>
+      </div>
+
+    </div>
   </footer>
 
 </body>
