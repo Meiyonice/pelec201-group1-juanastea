@@ -605,7 +605,6 @@ body {
 }
 
 /* -----------------------------------
-<<<<<<< HEAD
    FOOTER (100% MODULAR)
 ----------------------------------- */
 
@@ -613,15 +612,6 @@ body {
     position: relative;
     width: 100%;
     height: 610px;
-=======
-   FOOTER (FIXED)
------------------------------------ */
-.footer {
-    position: relative;
-    width: 100%;
-    height: 610px;
-    font-family: "Poppins", sans-serif;
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
 }
 
 .footer-bg {
@@ -631,7 +621,6 @@ body {
     box-shadow: inset 0 2px 50px rgba(197, 94, 5, 0.74);
 }
 
-<<<<<<< HEAD
 /* Matches navbar width & alignment */
 .footer-inner {
     position: relative;
@@ -649,31 +638,14 @@ body {
     width: 420px;
 }
 
-=======
-/* Logo – lowered */
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
 .footer-logo {
     width: 400px;
     height: 400px;
-<<<<<<< HEAD
     background: url("images/ui/juana-logo.png") center / contain no-repeat;
 }
 
 .footer-text {
     margin-top: -100px;
-=======
-    left: 100px;
-    top: 0px; /* was -20px */
-    background: url("images/ui/juana-logo.png") center / contain no-repeat;
-}
-
-/* Description – follows logo */
-.footer-text {
-    position: absolute;
-    width: 401px;
-    left: 112px;
-    top: 295px;
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
     font-size: 20px;
     line-height: 30px;
     font-weight: 500;
@@ -681,7 +653,6 @@ body {
     text-align: justify;
 }
 
-<<<<<<< HEAD
 /* RIGHT COLUMNS */
 .footer-columns {
     display: flex;
@@ -700,29 +671,6 @@ body {
     font-weight: 700;
     color: #462211;
     margin-bottom: 30px;
-=======
-/* Column headers – perfectly aligned */
-.footer-title {
-    position: absolute;
-    font-size: 25px;
-    font-weight: 800;
-    color: #462211;
-}
-
-.footer-pages-title {
-    left: 622px;
-    top: 185px;
-}
-
-.footer-contact-title {
-    left: 831px;
-    top: 185px;
-}
-
-.footer-location-title {
-    left: 1121px;
-    top: 185px;
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
 }
 
 /* Links */
@@ -734,19 +682,8 @@ body {
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
 /* Contact rows */
 .footer-contact {
-=======
-.footer-home { left: 623px; top: 255px; }
-.footer-products { left: 623px; top: 300px; }
-.footer-about { left: 623px; top: 345px; }
-
-/* Contact rows – aligned with links */
-.footer-contact {
-    position: absolute;
-    left: 831px;
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
     display: flex;
     align-items: center;
     gap: 12px;
@@ -756,12 +693,6 @@ body {
     margin-bottom: 20px;
 }
 
-<<<<<<< HEAD
-=======
-.footer-contact.phone { top: 255px; }
-.footer-contact.email { top: 300px; }
-
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
 /* Icon circle */
 .contact-icon {
     width: 35px;
@@ -771,10 +702,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-=======
-    background: transparent;
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
 }
 
 .contact-icon::before {
@@ -796,13 +723,6 @@ body {
 
 /* Location */
 .footer-location {
-<<<<<<< HEAD
-=======
-    position: absolute;
-    width: 217px;
-    left: 1121px;
-    top: 240px;
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
@@ -810,13 +730,8 @@ body {
     max-width: 220px;
 }
 
-<<<<<<< HEAD
 /* Bottom section */
 .footer-bottom {
-=======
-/* Bottom spacing – increased gap */
-.footer-line {
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
     position: absolute;
     bottom: 45px;
     left: 0;
@@ -826,24 +741,11 @@ body {
 
 .footer-line {
     width: 1091px;
-<<<<<<< HEAD
     margin: 0 auto 35px;
-=======
-    left: 50%;
-    bottom: 95px;
-    transform: translateX(-50%);
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
     border-top: 1px solid #462211;
 }
 
 .footer-copy {
-<<<<<<< HEAD
-=======
-    position: absolute;
-    bottom: 45px;
-    width: 100%;
-    text-align: center;
->>>>>>> 0162249c16b3fde1ee5453bb21ae361a718ed117
     font-size: 16px;
     font-weight: 400;
     color: #462211;
